@@ -1,0 +1,26 @@
+<view>
+  <view class="nav-bar">
+    <van-row>
+      <van-col span="6">
+        <view class="{{navIndex==0 ?'active':''}}" data-Index='0' catchtap="clickNav">安娜伯格系列</view>
+      </van-col>
+      <van-col span="6">
+        <view class="{{navIndex==1 ?'active':''}}" data-Index='1' catchtap="clickNav">新北欧原木系列</view>
+      </van-col>
+      <van-col span="6">
+        <view class="{{navIndex==2 ?'active':''}}" data-Index='2' catchtap="clickNav">汉城印象系列</view>
+      </van-col>
+      <van-col span="6">
+        <view class="{{navIndex==3 ?'active':''}}" data-Index='3' catchtap="clickNav">北欧风情系列</view>
+      </van-col>
+    </van-row>
+  </view>
+  <view class="section">
+    <block wx:for="{{imgList}}">
+        <view class="img-box">
+          <image class="img-case" src='{{item.img}}'></image>
+          <view class="displaySpan">{{item.name}}</view>
+        </view>
+    </block>
+  </view>
+</view>

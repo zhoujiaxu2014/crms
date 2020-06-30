@@ -1,0 +1,41 @@
+.nav-bar {
+  font-size: 10px;
+  background-color: #F0EFF2;
+  color: #A8ACAF;
+  height: 80rpx;
+}
+.nav-bar view {
+  line-height: 80rpx;
+}
+.nav-bar .van-col {
+  text-align: center;
+}
+.active {
+  color: #F7B425;
+  border-bottom: 2px solid #F7B425;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* width: 150rpx; */
+}
+/* 图片 */
+.section{
+  font-size: 10px;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.img-case {
+  width: 200rpx;
+  height: 200rpx;
+}
+.section .img-box {
+  text-align: center;
+  width: 33.3%;
+  float: left;
+  margin-bottom: 20rpx;
+  color: #8A8A80;
+}
+.displaySpan {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

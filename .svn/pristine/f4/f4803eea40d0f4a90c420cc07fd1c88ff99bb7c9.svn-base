@@ -1,0 +1,223 @@
+.backgroundImg {
+	/* 砸金蛋背景 */
+	width: 750rpx;
+	height: 800rpx;
+	position: relative;
+}
+
+.LotteryNumber {
+	/* 抽奖次数 */
+	position: absolute;
+	top: 635rpx;
+	left: 241rpx;
+	color: #fff;
+	font-size: 32rpx;
+}
+
+.numberActive {
+	/* 剩余次数 */
+	color: #fbd602;
+	padding: 0 4rpx;
+}
+
+page {
+	background-color: #6a11b9;
+	height: 100%;
+}
+
+/* 蛋 */
+
+#ageImg {
+	position: absolute;
+	top: 320rpx;
+	left: 470rpx;
+}
+
+#chuizi {
+	position: absolute;
+	top: 320rpx;
+	left: 560rpx;
+	z-index: 10;
+}
+
+#chuizi1 {
+	position: absolute;
+	top: 370rpx;
+	left: 360rpx;
+	z-index: 10;
+}
+
+#chuizi2 {
+	position: absolute;
+	top: 320rpx;
+	left: 190rpx;
+	z-index: 10;
+}
+
+/* 蛋 */
+
+#ageImg1 {
+	position: absolute;
+	top: 370rpx;
+	left: 285rpx;
+	z-index: 9;
+}
+
+/* 蛋 */
+
+#ageImg2 {
+	position: absolute;
+	top: 320rpx;
+	left: 100rpx;
+}
+
+#ageImg3 {
+	position: absolute;
+	top: 337rpx;
+	left: 444rpx;
+	z-index: 1;
+}
+
+#ageImg4 {
+	position: absolute;
+	top: 385rpx;
+	left: 258rpx;
+	z-index: 9;
+}
+
+#ageImg5 {
+	position: absolute;
+	top: 345rpx;
+	left: 72rpx;
+}
+
+/* 中奖记录 */
+
+.winningRecord {
+	position: absolute;
+	right: 0;
+	top: 100rpx;
+	color: #fedc01;
+	width: 150rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	background-color: #000;
+	opacity: 0.7;
+	text-align: center;
+	border-top-left-radius: 100rpx;
+	border-bottom-left-radius: 100rpx;
+}
+
+/* 活动奖品 */
+
+.ActivityPrizes {
+	margin: 20rpx;
+	width: 710rpx;
+	background-color: #974bd8;
+	color: #fff;
+}
+
+/* 活动奖品文本 */
+
+.prizeText {
+	text-align: center;
+	font-size: 24rpx;
+	display: flex;
+	justify-content: space-around;
+	padding: 10rpx 0;
+	border-top: 1px dashed #a263d8;
+}
+
+/* 分享活动 */
+
+.SharingActivities {
+	position: absolute;
+	top: 750rpx;
+	left: 270rpx;
+	width: 200rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	background-color: #fdd900;
+	text-align: center;
+	border-radius: 50rpx;
+	font-weight: bold;
+}
+
+/* 中奖记录弹出框 */
+
+.winningTable {
+	width: 680rpx;
+	border-radius: 20rpx;
+	height: 800rpx;
+	background-color: #6E21CB;
+}
+
+/* 弹出框样式修改 */
+
+/* 弹出框样式修改 */
+
+.asdfskjdklf .van-popup {
+background-color: var(--overlay-background-color,rgba(0,0,0,.0))!important;
+height: 100%;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		transform: matrix3d(0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1, 0, 60, 0, 0, 1);
+		z-index: 101;
+	}
+
+	25% {
+		transform: matrix3d(1.23333, 0, 0, 0, 0, 1.23333, 0, 0, 0, 0, 1, 0, -50, 10, 0, 1);
+		z-index: 101.1;
+	}
+
+	50% {
+		transform: matrix3d(0.9, 0, 0, 0, 0, 0.9, 0, 0, 0, 0, 1, 0, -150, 12, 0, 1);
+		z-index: 100;
+	}
+
+	75% {
+		transform: matrix3d(0.56667, 0, 0, 0, 0, 0.56667, 0, 0, 0, 0, 1, 0, -50, 10, 0, 1);
+		z-index: 99;
+	}
+
+
+	100% {
+		transform: matrix3d(0.90003, 0, 0, 0, 0, 0.90003, 0, 0, 0, 0, 1, 0, 60, 0.00827, 0, 1);
+		z-index: 101.00008;
+	}
+}
+
+/* 授权弹出框 */
+.shouquan {
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	text-align: center;
+}
+
+.shouquan .van-icon {
+	font-size: 20px;
+	color: #ee8031;
+	margin-right: 10px;
+}
+#LuckyDrawBox .van-popup {
+	padding-top: 200rpx;
+	border: none;
+	width: 710rpx;
+	height: 1000rpx;
+	text-align: center;
+	background-color: #000;
+	background: rgba(0, 0, 0, 0.1);
+}
+/* 中奖图片 */
+.ageBox{
+	position: relative;
+}
+.ageIcon {
+	position: absolute;
+	height: 600rpx;
+	width: 500rpx;
+	left: 85rpx;
+}

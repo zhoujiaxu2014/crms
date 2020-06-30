@@ -1,0 +1,8 @@
+/* pages/Perfectinformation/index.wxss */
+.asdfskjdklf .van-popup {
+background-color: var(--overlay-background-color,rgba(0,0,0,.0))!important;
+height: 100%;
+}
+.asdfskjdklf .van-button--small{
+	width: 290rpx;
+}

@@ -1,0 +1,85 @@
+/* pages/clientSide/index/myArdu/demandCollection/demandCollection.wxss */
+.demand-item {
+  padding: 30rpx 30rpx;
+}
+.demand-item > h1 {
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.demand-detail {
+  display: flex;
+  align-items: center;
+}
+.icon-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20rpx;
+}
+.icon-item > span {
+  font-size: 24rpx;
+  line-height: 20px;
+}
+.btn-item {
+  border-color: #eeeeee !important;
+}
+/* .selectInfo { */
+/* border: 1px solid #F0F0F0; */
+/* border-radius: 5px; */
+/* } */
+.select-wrapper .van-field__input {
+  text-align: right;
+  margin-right: 40rpx;
+}
+.select-wrapper {
+  padding: 5px 15px;
+}
+/* .submitBtn {
+  margin: 15px 0;
+} */
+.changeColor {
+  color: red !important;
+}
+.colorBlack {
+  color: black;
+}
+.btnClass .van-button {
+  border-radius: 20px;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+.huxing_radio .van-radio {
+  margin-right: 40rpx;
+  margin-top: 10px;
+}
+.huxing_radio .van-radio__label {
+  font-size: 14px;
+}
+.offer_item {
+  margin-bottom: 50px;
+}
+/* tab栏 */
+.tabBar_box {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  padding:  20rpx 0;
+  border-top: 1px solid #e4e4e4;
+  background-color: #FFFFFF;
+  color: #B7B7B7;
+  z-index: 9999999;
+}
+.tabBar_box > view {
+  width: 25%;
+}
+.tabBar_box > view >image {
+  height: 50rpx;
+  width: 50rpx;
+  z-index: 999999999;
+}

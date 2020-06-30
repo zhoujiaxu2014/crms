@@ -1,0 +1,47 @@
+<view class="content">
+  <view class="box-img">
+    <view class="box-item">
+      <view class="img"></view>
+      <p>韩城印象系列全屋定制</p>
+    </view>
+    <view class="box-item">
+      <view class="img"></view>
+      <p>韩城印象系列全屋定制</p>
+    </view>
+    <view class="box-item">
+      <view class="img"></view>
+      <p>韩城印象系列全屋定制</p>
+    </view>
+    <view class="box-item">
+      <view class="img"></view>
+      <p>韩城印象系列全屋定制</p>
+    </view>
+  </view>
+</view>
+<!-- 底部导航121栏 -->
+<view class="tabBar">
+  <view bindtap="go" data-tab="1" style="color:#000;">
+    <van-icon name="wap-home" size="40rpx" />
+    <button type="primary" size="mini" plain="true" style="color:#000;font-size:20rpx;">首页</button>
+  </view>
+  <view bindtap="go" data-tab="2">
+    <van-icon name="apps-o" size="40rpx" style="color:#f7b425;" />
+    <button type="primary" size="mini" plain="true" style="color:#f7b425;font-size:20rpx;">产品展示</button>
+  </view>
+  <view bindtap="go" data-tab="3">
+    <van-icon name="point-gift-o" size="40rpx" style="color: #000;" />
+    <button type="primary" size="mini" plain="true" style="color:#000;font-size:20rpx;">活动中心</button>
+  </view>
+  <view>
+    <button wx:if="{{!dia_show}}" type="primary" size="mini" plain="true" style="color:#000;font-size:20rpx;" open-type="getPhoneNumber" bindgetphonenumber="getUserPhone">
+      <van-icon name="contact" size="40rpx" style="color: #000;" />
+      <view>
+        我的亚度</view>
+    </button>
+    <button wx:if="{{dia_show}}" type="primary" bindtap="go" data-tab="4" size="mini" plain="true" style="color:#000;font-size:20rpx;">
+      <van-icon name="contact" size="40rpx" style="color: #000;" />
+      <view>
+        我的亚度</view>
+    </button>
+  </view>
+</view>

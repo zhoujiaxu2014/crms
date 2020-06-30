@@ -1,0 +1,297 @@
+<view class="index_home">
+  <view class="steps_box">
+    <!-- <van-steps steps="{{ steps }}" active="{{ active }}" /> -->
+    <view class="steps_content">
+      <view class="steps_first">
+        <span class="num">1</span>
+        <view class="steps_word">确认方案</view>
+      </view>
+      <view class="steps_second">
+        <span class="line {{caseLine==true?'lineStyle':''}}"></span>
+      </view>
+      <view class="steps_third">
+        <span class="num {{caseLine==false?'numStyle':''}}">2</span>
+        <view class="steps_word">确认报价</view>
+      </view>
+      <view class="steps_four">
+        <span class="line {{baojiaLine==true?'lineStyle':''}}"></span>
+      </view>
+      <view class="steps_five">
+        <span class="num {{qianyue==false?'numStyle':''}}">3</span>
+        <view class="steps_word">签订合同</view>
+      </view>
+    </view>
+  </view>
+  <view class="case_box">
+    <view class="case_box_content">
+      <view class="case_box_content_list">
+        <!-- 基本信息 -->
+        <view class="base_Info">
+          <view class="baseInfo_list">
+            <view style="font-size: 16px;color: #5E5E5E;">基本信息</view>
+            <view>
+              <image src='../../../image/shejishi.png' style="width: 35rpx;height: 35rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+              <span>设计师：{{result.taskImplName==undefined?'暂无数据':result.taskImplName}}</span>
+            </view>
+            <view>
+              <image src='../../../image/dianhua.png' style="width: 35rpx;height: 35rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+              <span>电话：{{result.taskImplPhone==undefined?'暂无数据':result.taskImplPhone}}</span>
+            </view>
+            <view>
+              <image src='../../../image/weizhi.png' style="width: 35rpx;height: 35rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+              <span>房屋地址：{{result.customerAddr==undefined?'暂无数据':result.customerAddr}}</span>
+            </view>
+          </view>
+
+        </view>
+        <!-- 我的方案 -->
+        <view wx:if='{{isChoose==true}}'>
+          <view class="myCase" wx:if='{{list.length>0}}'>
+            <view class="mycase_info">
+              <view class="mycase_info_left">我的方案</view>
+              <view class="mycase_info_right">
+                <span style="margin-right: 10rpx;">720°全景查看</span>
+                <image src='../../../image/720du.png' style="width: 35rpx;height: 35rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+              </view>
+            </view>
+            <view class="swiper_Img">
+              <!-- <block wx:for="{{imgScheList}}" wx:key="*this"> -->
+                <swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}"
+                duration="{{duration}}">
+                <block wx:for="{{imgScheList}}" wx:key="*this">
+                    <swiper-item class="image-container">
+                      <image src="{{item.img}}" class="slide-image" catchtap="gosto" data-url="{{item.schemeUrl}}" />
+                      <view class="caseNum {{changeCaseColor==index?'caseNumColor':''}}" wx:if='{{alreadyCase==false}}'  bindtap="choiceCaseImg" data-schemeid="{{item.schemeId}}" data-revision="{{item.revision}}" data-name="{{item.schemeName}}" data-index="{{index}}">方案{{index+1}}</view>
+                      <view class="caseNum caseNumColor" wx:else>已选方案</view>
+                    </swiper-item>
+                </block>
+              </swiper>
+            <!-- </block> -->
+            <view style="position: fixed;bottom: 20px;width: 80%;" bindtap="Choice" wx:if="{{!alreadyCase&&!isBaojia}}">
+              <van-button round type="info"color='#FC3D42' size="large">确认方案</van-button>
+            </view>
+            </view>
+          </view>
+          <view wx:else style="margin-top: 20px;padding: 0 0 20px 0;text-align: center;">
+            <image src='../../../image/xiaodu.png' style="width: 155px;height: 155px;vertical-align: middle;"></image>
+            <view style="margin-top: 10px;color: #C6C6C6;">小度正快马加鞭为您定制方案中...</view>
+            <view style="margin-top: 60px;width: 100%;" class="caseBtn">
+              <van-button round type="info"color='#ACACAC' size="large" disabled style="width: 70%;">确认方案</van-button>
+            </view>
+          </view>
+        </view>
+        <!-- 报价 -->
+        <view class="princeInfo"  wx:if="{{isBaojia==true}}">
+          <view  wx:if="{{hasDataCase==true}}">
+            <view class="princeInfo_info">
+              <view class="princeInfo_left">报价汇总</view>
+              <view class="princeInfo_right" bindtap='princeDetail' data-id='{{schemeid}}'>
+                <span style="margin-right: 10rpx;">报价详情</span>
+                <image src='../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;"></image>
+              </view>
+            </view>
+            <view class="prince_detail color_font_big">
+              <view>方案汇总：</view>
+              <view>{{allMon}}元</view>
+            </view>
+            <view class="prince_detail color_font_small">
+              <view>客厅：</view>
+              <view>{{livingRoom}}元</view>
+            </view>
+            <view class="prince_detail color_font_small">
+              <view>卧室：</view>
+              <view>{{bedroom}}元</view>
+            </view>
+            <view class="prince_detail color_font_small">
+              <view>厨房：</view>
+              <view>{{kitchen}}元</view>
+            </view>
+            <view style="margin-top: 40px;" wx:if='{{!isOffer&&!tip2}}'>
+              <!-- wx:if='{{!isOffer&&!tip2}}' -->
+              <van-button round type="info"color='#FC3D42' size="large" bindtap="goOfferClick">确认报价</van-button>
+            </view>
+          </view>
+          <view style="margin-top: 20px;padding: 0 0 20px 0;text-align: center;" wx:else>
+            <image src='../../../image/xiaodu.png' style="width: 155px;height: 155px;vertical-align: middle;"></image>
+            <view style="margin-top: 10px;color: #C6C6C6;">小度正快马加鞭为您计算报价中...</view>
+            <view style="margin-top: 60px;width: 100%;" class="caseBtn">
+              <!-- <van-button round type="info"color='#ACACAC' size="large" disabled style="width: 70%;">确认方案</van-button> -->
+            </view>
+          </view>
+        </view>
+        <!-- 我的合同 -->
+        <view class="myCase" wx:if='{{isOffer==true}}'>
+          <view  wx:if="{{path==''}}" style="margin-top: 40px;">
+            <van-button round type="info"color='#ACACAC' size="large" disabled>合同生成中</van-button>
+          </view> 
+          <view wx:else>
+            <view class="princeInfo_info">
+              <view class="princeInfo_left">我的合同</view>
+              <view class="princeInfo_right" data-path='{{path}}' bindtap='clickContract'>
+                <span  style="margin-right: 10rpx;">查看合同</span>
+                <image src='../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;"></image>
+              </view>
+            </view>
+            <view style="margin-top: 40px;" bindtap="goOffer" bindtap='goContract' wx:if="{{!qianyue}}">
+              <van-button round type="info"color='#FC3D42' size="large">签订合同</van-button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <van-toast id="van-toast"></van-toast> -->
+<!-- <view class="validationPlan" style="margin-top: 1000px;">
+    <view class="baseInfo">
+        <view style="color: #000;font-size:28rpx;border-bottom: 1px solid #F0EFF2;">基本信息</view>
+        <view style="display:flex;"><view style="width:180rpx;">房屋地址：</view><span>{{result.customerAddr}}</span></view>
+        <view style="display:flex;"><view style="width:180rpx;">设计师：</view><span>{{result.taskImplName}}</span></view>
+        <view style="display:flex;"><view style="width:180rpx;">设计师电话：</view><span>{{result.taskImplPhone}}</span></view>
+        <view style="display:flex;" wx:if="{{isSigning}}"><view style="width:180rpx;">合同编号：</view><span>{{contractNum}}</span></view>
+    </view>
+         <view style="display:flex;justify-content: space-between;padding:0 20rpx;" wx:if="{{isSigning}}">
+            <view style="width:220rpx;margin-top:16rpx;color:#F7B528;">您已签约合同!</view>
+            <span><a bindtap="goContractss" style="text-align:center;background: #F7B528;color: #fff;line-height: 60rpx;display: block;width:160rpx;border-radius: 30rpx;">查看合同</a></span>
+        </view>
+        <view style="display:flex;justify-content: space-between;padding:0 20rpx;" wx:elif="{{isOffer}}">
+            <view style="width:220rpx;margin-top:16rpx;color:#F7B528;">您已确认方案报价!</view>
+            <span wx:if="{{!tip2}}"><a bindtap="goContractss" style="text-align:center;background: #F7B528;color: #fff;line-height: 60rpx;display: block;width:160rpx;border-radius: 30rpx;">查看合同</a></span>
+        </view>
+    <view class="validate">
+        <view style="color: #000;font-size:28rpx;border-bottom: 1px solid #F0EFF2;  text-indent: 20rpx;" wx:if="{{!isChoose}}">选择方案</view>
+        <view style="color: #000;font-size:28rpx;border-bottom: 1px solid #F0EFF2;  text-indent: 20rpx;" wx:else>已选方案</view>
+        <view class="list" style="margin: 20rpx;border-bottom:1px dashed #F0EFF2;padding:20rpx;" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="validateHeader" style="display:flex;justify-content: space-between;">
+                <view style="display:flex;">
+                    <p  wx:if="{{!isChoose}}" style="border:2px solid #F7B528;color: #F7B528;border-radius:50%;width:36rpx;height:36rpx;font-weight:bold;line-height:36rpx;font-size:14px;text-align:center;display: block;margin-right:10rpx;">{{index+1}}</p>
+                    <span style="color: #000;">{{item.schemeName}}</span>
+                </view>
+                <view style="color: #3296FA;vertical-align:top;display:flex;" bindtap="Choice" data-schemeid="{{item.schemeId}}" data-revision="{{item.revision}}" data-name="{{item.schemeName}}" data-index="{{index}}" wx:if="{{!isChoose}}">
+                    <span>选我 </span>
+                    <span><icon class="iconfont  icon-dianji" style="font-size:40rpx;"></icon></span>
+                </view>
+                <view catchtap="gosto" data-url="{{item.schemeUrl}}"><icon class="iconfont icon-panorama" style="color:#E33C2F;font-size:60rpx;"></icon></view>
+            </view>
+            <view class="briefIntroduction" style=" text-indent:40rpx;">{{item.schemeDesc}}</view>
+        <view class="picture" style="margin-top:40rpx;">
+            <van-image wx:for="{{item.schemeAccess}}" width="31%" height="100" wx:for-item="items" src="{{items}}" style="margin:40rpx 6rpx;" bindtap="imagePre" data-index="{{index}}" data-picture="{{item.schemeAccess}}" data-res="{{items}}"/>
+        </view>
+        <van-dialog use-slot title="选择方案" show="{{ show }}" show-cancel-button bind:confirm="onConfirm" bind:cancel="onCancel">
+            <view class="group" style="margin-top:40rpx;">
+                 <view style="width:150rpx;">方案名称</view>
+                 <view>{{name}}</view>
+            </view>
+            <view class="group" style="margin-bottom:40rpx;">
+                    <view style="width:150rpx;line-height:80rpx;">方案留言</view>
+                    <view style="margin-top:20rpx;">
+                        <textarea style="border:1px solid #F7B528;border-radius:6rpx;width:420rpx;height:160rpx;line-height:40rpx;padding: 3px;" bindinput="gainMessage" value="{{okParams.customerComments}}" placeholder="请输入对该方案的建议或意见" placeholder-style="color:grey;"/>
+                    </view>
+            </view>
+        </van-dialog>
+        </view>
+    </view>
+    <view style="text-align: center" wx:if="{{tip1}}">方案报价正在核算中...</view>
+        <view class="baseInfo"  wx:if="{{isChoose&&(!tip1)}}">
+                <view style="color: #000;font-size:28rpx;">报价汇总</view>
+                <view class="table">
+                    <view class="thead">
+                        <view class="tr">
+                            <view class="td">方案总价</view>
+                            <view class="td">{{allMon}}</view>
+                        </view>
+                    </view>
+                    <view class="tbody">
+                            <view class="tr" wx:for="{{quotationSummary}}" wx:key="{{index}}">
+                                <view class="td">{{item.spaceTypeName}}</view>
+                                <view class="td">{{item.totalMon}}</view>
+                            </view>
+                    </view>
+                </view>
+            </view>
+            <view class="baseInfo" wx:if="{{(!tip1)&&isChoose}}">
+                    <view style="color: #000;font-size:28rpx;">报价详情</view>
+                    <view class="table">
+                        <view class="thead">
+                            <view class="tr">
+                                <view class="td">产品名称</view>
+                                <view class="td">小计</view>
+                            </view>
+                        </view>
+                        <view class="tbody">
+                                <view class="tr"  wx:for="{{quotationDeatil}}" wx:key="{{index}}">
+                                    <view class="td">{{item.productName}}<text wx:if="{{item.quantity>1}}">×{{item.quantity}}</text></view>
+                                    <view class="td">{{item.quantity*item.salePrice}}</view>
+                                </view>
+                        </view>
+                    </view>
+                </view>
+            <view style="text-align: center;margin-bottom:40rpx;" wx:if="{{tip2}}">方案合同正在生成中...</view>
+<van-button color="#F7B528;" block bind:click="goContract" wx:if="{{isShowSigning}}">签约合同</van-button>
+<van-button color="#F7B528;" block bind:click="goOffer" wx:elif="{{isShowOffer}}">确认报价</van-button>
+<van-dialog use-slot title="是否确认签约合同" show="{{ showQ }}" show-cancel-button bind:confirm="onConfirmQ" bind:cancel="onCancelQ">
+        <view class="group" style="margin-top:40rpx;">
+             <view style="width:150rpx;">方案名称</view>
+             <view>{{list[0].schemeName}}</view>
+        </view>
+        <view class="group" style="line-height:80rpx;">
+            <view style="width:150rpx;">方案总价</view>
+            <view>￥{{allMon}}</view>
+        </view>
+        <view class="group" style="margin-bottom:40rpx;">
+            <view>请尽快联系您的设计师，进行线下纸质合同签约</view>
+        </view>
+    </van-dialog>
+</view> -->
+
+<!-- 选择方案 -->
+<van-dialog use-slot title="选择方案" show="{{ show }}" show-cancel-button bind:confirm="onConfirm" bind:cancel="onCancel" class="caseConfirmDialog">
+  <view class="group" style="margin-top:40rpx;">
+    <view style="width:150rpx;font-size: 12px;color: #656565;">方案名称：</view>
+    <view style="font-size: 12px;color: #B1B1B1;">{{name}}</view>
+  </view>
+  <view class="group" style="margin-bottom:40rpx;">
+    <view style="width:150rpx;line-height:80rpx;font-size: 12px;color: #656565;">方案留言：</view>
+    <view style="margin-top:20rpx;" class="caseText">
+        <textarea bindinput="gainMessage" value="{{okParams.customerComments}}" placeholder-style="color:red;" placeholder="" maxlength='128' />
+    </view>
+  </view>
+</van-dialog>
+<!-- 签约合同 -->
+<van-dialog class="signContract" use-slot title="是否确认签约合同" show="{{ showQ }}" show-cancel-button bind:confirm="onConfirmQ" bind:cancel="onCancelQ">
+  <view class="group" style="margin-top:40rpx;">
+       <view style="width:150rpx;color: #656565;">方案名称：</view>
+       <view style="color: #B1B1B1;">{{list[0].schemeName}}</view>
+  </view>
+  <view class="group" style="line-height:80rpx;">
+      <view style="width:150rpx;color: #656565;">方案总价:</view>
+      <view style="color: #B1B1B1;">￥{{allMon}}</view>
+  </view>
+  <view class="group" style="margin-bottom:40rpx;text-align: center;">
+      <view style="color: #FC3D42;font-size: 12px;">请尽快联系您的设计师，进行线下纸质合同签约</view>
+  </view>
+</van-dialog>
+<!-- 确认报价弹窗 -->
+<van-dialog use-slot title="" class="baojiaDialog" show="{{ showBaojia }}" show-cancel-button bind:confirm="goOffer" bind:cancel="onCancelQ">
+  <view style="line-height: 240rpx;text-align: center;">是否确认当前报价？</view>
+</van-dialog>
+
+<!-- 报价详情 -->
+<!-- <van-dialog
+  use-slot
+  title="报价详情"
+  show="{{ showPrince }}"
+  show-cancel-button
+>
+  <view>报价详情</view>
+  <view>
+    <view>产品名称：客厅/椅子</view>
+    <view>颜色系列：大红色</view>
+    <view>单位：把</view>
+    <view>数量：1</view>
+    <view>单价：12.00</view>
+    <view>小计：24.00</view>
+  </view>
+</van-dialog> -->
+

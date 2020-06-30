@@ -1,0 +1,4 @@
+<view class="share">
+    <canvas canvas-id="shareCanvas" style="width:300px;height:380px"></canvas>
+</view>
+<view class="tip" wx:if="{{show}}">图片已经保存到手机相册，快分享到朋友圈吧</view>

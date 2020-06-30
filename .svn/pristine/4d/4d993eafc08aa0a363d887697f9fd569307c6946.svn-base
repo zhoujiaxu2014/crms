@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+ 
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+   <button type="default" bindtap="openblue"> 打开蓝牙模块 </button>
+   <button type="default" bindtap="shaomiao"> 搜索附近蓝牙设备 </button>
+   <button type="default" bindtap="getallblue"> 获取所有已发现的蓝牙设备 </button>
+   <button type="default" bindtap="connectblue"> 连接蓝牙设备</button>
+   <button type="default" bindtap="getservice"> 取蓝牙设备的所有服务</button>
+   <button type="default" bindtap="getchara"> 取蓝牙设备服务下的的所有特征值</button>
+   <button type="default" bindtap="lanyatest9"> 启用特征值变化notify</button>
+   <button type="default" bindtap="startread"> 接收蓝牙返回消息</button>
+   <!-- <button type="default" bindtap="writedata"> 向蓝牙设备写入数据(降)</button> -->
+   <!-- <button type="default" bindtap="writedata2"> 向蓝牙设备写入数据(升)</button> -->
+   <button type="default" bindtap="closeblue" > 关闭蓝牙模块 </button>
+  </view>
+</view>

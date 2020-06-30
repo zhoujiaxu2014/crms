@@ -1,0 +1,51 @@
+<view>
+	<view>
+		<van-cell-group>
+			<van-cell-group>
+				<van-field maxlength='10' bind:change="onchangeCode" value="{{ VerificationCode }}" center required clearable label="兑奖验证" placeholder="请输入右侧验证码" border="{{ false }}"
+				 use-button-slot>
+					<view slot="button" bindtap='changeImgcode'>
+						<image src='{{codeImgae}}' style='width: 200rpx;height: 80rpx;'></image>
+					</view>
+				</van-field>
+			</van-cell-group>
+			<van-field error-message='{{errorPhoneText}}' required value="{{ phone }}" center clearable label="手机号" placeholder="请输入手机号"
+			 border="{{ false }}" use-button-slot bind:change="onChange">
+				<van-button slot="button" size="small" type="primary" bindtap='GetVerificationCode' loading='{{loadingBtn}}'
+				 disabled='{{loadingBtn}}' loading-text="{{countDownNum}}秒后重新获取">获取验证码</van-button>
+			</van-field>
+			<van-field error-message='{{errorCodeText}}' required value="{{ Verificationcode }}" center clearable label="验证码"
+			 placeholder="请输入短信验证码" border="{{ false }}" use-button-slot bind:change="onChange2">
+			</van-field>
+			<van-field value="{{ address }}" center clearable label="地址" placeholder="请输入收货地址(非必填)" border="{{ false }}"
+			 use-button-slot bind:change="onChange1">
+			</van-field>
+		</van-cell-group>
+	</view>
+	<van-button type="primary" block bindtap='sub' loading='{{loadingSubBtn}}'>确定</van-button>
+</view>
+<!-- 二维码 -->
+<view class='asdfskjdklf'>
+	<!-- Qrshow -->
+	<van-popup show="{{ Qrshow }}" bind:close="closeQrcode" close-on-click-overlay z-index='9999'>
+		<canvas class="canvas-code" canvas-id="myQrcode" style="background:#fff;width: 200px;height: 200px;margin-top:350rpx;" />
+		<view style='color: #fff;font-size: 26rpx;padding: 10rpx;text-align: center;'>请到附近门店进行兑奖</view>
+		<view wx:if='{{zzlocation}}' style='color: #fff;font-size: 26rpx;padding: 10rpx;text-align: center;'>(离您最近的店铺{{zzlocation}})</view>
+		<view bindtap='gotoroom' style='color: #fff;width: 100%;text-align: center;font-size: 26rpx;align-items: center;margin-top: 50rpx;'>
+<!-- 			<van-icon style='vertical-align: middle;' name="map-marked" />
+			<view style='vertical-align: middle;'>去看看附近的店</view> -->
+			<van-button size='small' round icon='map-marked' color="linear-gradient(to right, #ff2e00, #ff0000)">去看看附近的店</van-button>
+		</view>
+
+		<view  bindtap='gotoActive' style='color: #fff;width: 100%;text-align: center;font-size: 26rpx;align-items: center;margin-top: 50rpx;'>
+<!-- 			<van-icon style='vertical-align: middle;' name="hot" />
+			<view style='vertical-align: middle;'>返回活动</view> -->
+			<van-button size='small' round icon='hot' color="linear-gradient(to right, #ff424f, #ff5c00)">返回活动</van-button>
+		</view>
+		<view  bindtap='gotoHome' style='color: #fff;width: 100%;text-align: center;font-size: 26rpx;align-items: center;margin-top: 50rpx;'>
+<!-- 			<van-icon style='vertical-align: middle;' name="home-o" />
+			<view style='vertical-align: middle;'>返回首页</view> -->
+			<van-button  size='small' round icon='home-o' color="linear-gradient(to right, #00b9f8, #00f8d6)">返回首页</van-button>
+		</view>
+	</van-popup>
+</view>

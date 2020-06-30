@@ -1,0 +1,4 @@
+
+<web-view src="{{contractUrl}}"></web-view>
+<image src="{{contractUrl}}" style="width:750rpx;border:1px solid red;"></image>
+

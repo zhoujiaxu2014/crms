@@ -1,0 +1,106 @@
+<!--pages/map/map.wxml-->
+
+<!-- 这是地图部分 -->
+
+<view class="map_container">
+	<map id='myMap' class='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}"
+	 bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap'
+	 bindcontroltap='bindcontroltap' show-location data-gid="{{markers}}">
+	</map>
+	<view wx:if='{{list.length==0}}' style='padding-top: 300rpx;font-size: 50rpx;color: #ccc;'>暂无附近的店</view>
+	<view wx:if='{{list.length>0}}' class='cardBox'>
+		<scroll-view class="scroll-box" scroll-x scroll-with-animation scroll-into-view="{{toView}}" bindtouchstart="touchStart"
+		 bindtouchend="touchEnd">
+			<view wx:for="{{list}}" wx:key="{{index}}" class="card-box" id="card_{{index}}" wx:key='key'>
+				<view style='width: 100%;text-align: center;position: absolute;top: 20rpx;' data-gid="{{item}}" bindtap='lockserve'>
+					<image src="{{item.sampleRoomPic}}" style='width:500rpx;height:250rpx;border-radius: 20rpx;box-shadow: 2px 2px 2px 2px #ccc;'></image>
+				</view>
+				<view class="card">
+					<view style='padding-top: 200rpx;'>
+					</view>
+					<view style='font-size: 40rpx;color: #FB9D01;' data-gid='{{item}}' bindtap='onGuideTap'>
+						<!-- <van-icon name="share" /> -->
+						<!-- <i class="iconfont">&#xe6ba;</i> -->
+						<!-- <van-icon name="aim" /> -->
+						<van-icon name="map-marked" />
+					</view>
+					<view class='cardText' data-gid='{{item}}' bindtap='onGuideTap'>
+						<van-icon name="location-o" style='color:#FB9D02;vertical-align: middle;font-size: 30rpx;padding-right:10rpx' />
+						<view style='vertical-align: middle;' class='textCard'>{{item.sampleRoomCity+item.sampleRoomArea+item.sampleRoomDistrict+item.sampleRoomNumber}}</view>
+					</view>
+<!-- 					<view class='cardText' bindtap='payPhone' data-gid='{{item.sampleRoomSalesTel}}'>
+						<van-icon name="phone-o" style='color:#FB9D02;vertical-align: middle;font-size: 30rpx;padding-right:10rpx' />
+						<view style='vertical-align: middle;' class='textCard'>{{item.sampleRoomSalesTel}}</view>
+					</view> -->
+					<view class='cardText'>
+						<van-icon name="point-gift-o" style='color:#FB9D02;vertical-align: middle;font-size: 30rpx;padding-right:10rpx' />
+						<view style='vertical-align: middle;' class='textCard'>{{item.sampleRoomStyle}}</view>
+					</view>
+					<view style='display: flex;justify-content: space-around;'>
+						<view style='text-align: center;margin-top: 30rpx;'>
+							<van-button size="small" round color="linear-gradient(to right, #FA426F, #F2B143)" bindtap='payPhone' data-gid='{{item.sampleRoomSalesTel}}' icon="phone-o" >联系商家</van-button>
+						</view>
+						<view style='text-align: center;margin-top: 30rpx;'>
+							<van-button icon='hot' size="small" round color="linear-gradient(to right, #FA426F, #F2B143)" data-gid='{{item}}' bindtap='ViewActivities'>查看活动</van-button>
+						</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view style='display:flex;position: absolute;top: 0;text-align: center;width: 90vw;background-color: #fff;margin: 2vh 5vw;border-radius: 20rpx;overflow: hidden;box-shadow: 2px 2px 2px #ccc;'>
+    <view style="width: 20%;line-height: 34px;font-size: 12px;" bindtap='goAddress'>
+      <van-icon name="location" />
+      <text style="margin-left: 10rpx;">{{myCity}}</text>
+      <!-- <address my-city="北京" data="{{city}}" binddetail="bindtap"></address></view> -->
+    </view>
+    <view style="width: 80%;">
+      <van-search value="{{ searchKey }}" clearable placeholder="请输入地址关键词" background="#F7F8FA"
+		 bind:change="onChange" bind:search='searchapi' />
+    </view>
+  </view>
+</view>
+<van-popup show="{{ popupsShow }}" position="bottom" custom-style="height: 50%;" bind:close="onClose" closeable>
+	<view style='font-size: 24rpx;'>
+		<view style='padding-top: 100rpx;'></view>
+		<view wx:if='{{popupsActive.length==0}}' style='text-align: center;font-size: 50rpx; color: #ccc;'>暂无活动</view>
+		<view class='box' wx:for='{{popupsActive}}' wx:key='key' bindtap='participateActivity' data-gid='{{item}}'>
+			<view style='width: 200rpx;height: 200rpx;padding: 10px;'>
+				<image src='{{item.luckyDrawBanner}}' style='width: 100%;height: 100%;'></image>
+			</view>
+			<view style='padding: 10px;'>
+				<view style='padding:10rpx 0'>{{item.luckyDrawName}}</view>
+				<view style='padding:10rpx 0'>开始时间:{{item.startIme}}</view>
+				<view style='padding:10rpx 0'>结束时间:{{item.endTime}}</view>
+				<view style='padding:10rpx 0;width:400rpx;word-break: break-all;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{item.luckyDrawDeploy}}</view>
+			</view>
+		</view>
+	</view>
+</van-popup>
+<!-- <view class='list-guide'>
+	<view bindtap="onGuideTap" data-latitude='39.92392' data-longitude='116.411885' data-bankName='测试一哈'>
+		<text class='list-guide-text'>导航</text>
+	</view>
+	<view bindtap='onbankTap' data-bankId="{{item.BANK_ID}}">
+		<text class='list-guide-text'>详情</text>
+	</view>
+</view> -->
+<!-- tab栏 -->
+<!-- <view class="tabBar_box">
+  <view bindtap='jump' data-num='1'>
+    <image src='../../image/shouyegrey.png'></image>
+    <view>首页</view>
+  </view>
+  <view bindtap='jump' data-num='2'>
+    <image src='../../image/offer.png'></image>
+    <view>智慧报价</view>
+  </view>
+  <view>
+    <image src='../../image/shequdianred.png'></image>
+    <view>社区店</view>
+  </view>
+  <view bindtap='jump' data-num='3'>
+    <image src='../../image/my.png'></image>
+    <view>我的</view>
+  </view>
+</view> -->

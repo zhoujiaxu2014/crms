@@ -1,0 +1,25 @@
+page{
+    background: #f2f2f0;
+}
+.share{
+    width:600rpx;
+    height:800rpx;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 250rpx;
+    margin: auto;
+    background: #fff;
+    box-shadow: 2rpx 2rpx 10rpx 14rpx #f0f0f0;
+    }
+.tip{
+    font-size: 24rpx;
+    text-align: center;
+    color: #aaa;
+    position: fixed;
+    top: 50%;
+    margin-left: auto;
+    margin-top:350rpx;
+    width: 100%;
+}

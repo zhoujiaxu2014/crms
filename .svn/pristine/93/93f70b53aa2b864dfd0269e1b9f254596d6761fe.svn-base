@@ -1,0 +1,101 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": false,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true,
+		"preloadBackgroundData": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxa34142cd3be1d731",
+	"projectname": "CRMS",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "砸蛋",
+					"pathName": "pages/ageActive/age",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "转盘",
+					"pathName": "pages/RotaryTable/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "完善个人信息",
+					"pathName": "pages/Perfectinformation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "更多活动",
+					"pathName": "pages/moreActiveList/active",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "附近的店",
+					"pathName": "pages/nearRoom/room",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

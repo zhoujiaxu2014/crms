@@ -1,0 +1,94 @@
+
+<view>
+    <view class="detail_page">
+        <ul class="deatail_list">
+            <li>
+                <view>姓名：</view>
+                <view class="color_black">{{cusName}}</view>
+            </li>
+            <li>
+                <view>状态：</view>
+                <view class="color_yellow">{{status}}</view>
+            </li>
+            <li>
+                <view>电话：</view>
+                <view class="color_black">{{cusPhone}}</view>
+            </li>
+            <li>
+                <view>开始访问时间：</view>
+                <view wx:if="{{status==='待审核'}}" data-num='1' bindtap='time'>{{startTime}}</view>
+                <view wx:else>{{startTime}}</view>
+            </li>
+            <li>
+                <view>结束访问时间：</view>
+                <view wx:if="{{status==='待审核'}}" data-num='2' bindtap='time'>{{endTime}}</view>
+                <view wx:else>{{endTime}}</view>
+            </li>
+            <li>
+                <view>申请样板间：</view>
+                <view>{{room}}<span wx:if="{{status==='待审核'}}" class="click_more" bindtap='choiceRoom'>更换样板间</span></view>
+            </li>
+            <li wx:if="{{status!=='待审核'}}">
+                <view>参观密码：</view>
+                <view>#{{passWord}}#</view>
+            </li>
+            <li>
+                <view>样板间负责人：</view>
+                <view>{{people}}</view>
+            </li>
+            <li>
+                <view>负责人电话：</view>
+                <view>{{phone}}</view>
+            </li>
+            <li>
+                <view>访问人数：</view>
+                <view>
+                    <van-field
+                        disabled="{{status!=='待审核'}}"
+                        value="{{ name }}"
+                        placeholder=""
+                        border="{{ false }}"
+                        bind:change="onChange"
+                    />
+                </view>
+            </li>
+            <li>
+                <view>地址：</view>
+                <view>{{address}}</view>
+            </li>
+        </ul>
+    </view>
+    <van-button wx:if="{{status==='待审核'}}" type="primary" color="#F7B425" block class="auditBtn" bindtap='auditRoom'>修改</van-button>
+    <!-- 开始时间 -->
+    <view class="start_time" wx:if='{{startShow==true}}'>
+        <van-datetime-picker
+            type="datetime"
+            value="{{ currentDate }}"
+            min-date="{{ minDate }}"
+            bind:confirm='getStartTime'
+            bind:cancel='cancelStartTime'
+        />
+    </view>
+    <!-- 结束时间 -->
+    <view class="start_time" wx:if='{{endShow==true}}'>
+        <van-datetime-picker
+            type="datetime"
+            value="{{ currentDateEnd }}"
+            min-date="{{ minDateEnd }}"
+            bind:confirm='getEndTime'
+            bind:cancel='cancelEndTime'
+        />
+    </view>
+    <van-toast id="van-toast"></van-toast>
+    <!-- 提交弹窗 -->
+    <van-dialog
+        use-slot
+        title=""
+        show="{{ showDialog }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:confirm='auditRoonInfo'
+        >
+        <view class="dialog_tips"><van-icon name="info" color='#F7B528' size='20' />确认修改该访问信息吗？</view>
+    </van-dialog>
+</view>

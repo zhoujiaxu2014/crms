@@ -1,0 +1,35 @@
+<view class="content">
+  <view class="list" wx:for="{{activeList}}" wx:key="{{index}}" data-id="{{item.activityDetails}}">
+    <view class="top">
+        <view class="inner_top"><view class="aside"></view><view>{{item.activityName}}</view></view>
+      <!-- <view class="Time"><van-icon name="underway" class="yellow icon"/><text>2020:10:23</text></view> -->
+    </view>
+    <view class="middle" data-index="{{item.activityId}}" bindtap="gotoActivityDetails">
+      <!-- <image src="{{item.activityPic}}" style="width:160rpx;height:160rpx;"></image> -->
+      <van-image
+          width="120"
+          height="120"
+          src="{{item.activityTpic}}"
+        />
+      <ul class="listText">
+        <li>活动开始时间：
+          <span>{{item.startTime}}</span>
+        </li>
+        <li>活动结束时间：
+          <span>{{item.endTime}}</span>
+        </li>
+        <li class="displayLiOne">活动范围：
+          <span>{{item.province}}{{item.city == null?"":item.city}}{{item.area == null?"":item.area}}</span>
+        </li>
+        <li class="displayLi">活动简介：
+          <span>{{item.activityDesc}}</span>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <!-- 加载提示 -->
+  <view style="margin: 50rpx 350rpx;" wx:if="{{ismore}}">
+    <van-loading type="spinner" />
+  </view>
+  <view style="color: #a2a2a2;font-size: 25rpx;margin:50rpx 310rpx" wx:else>没有更多了</view>
+</view>

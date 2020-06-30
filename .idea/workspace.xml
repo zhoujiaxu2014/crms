@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de24d7da-ff48-4439-92fa-5ddb262036f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Perfectinformation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Perfectinformation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/RotaryTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/RotaryTable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ageActive/age.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ageActive/age.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ageActive/age.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ageActive/age.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ageActive/age.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ageActive/age.wxss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Yn6UQLjgjxVJ6dEmhxON2eMfHD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de24d7da-ff48-4439-92fa-5ddb262036f4" name="Default Changelist" comment="" />
+      <created>1583566026747</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583566026747</updated>
+      <workItem from="1583566029122" duration="15000" />
+      <workItem from="1583566902468" duration="67000" />
+      <workItem from="1583577561326" duration="128000" />
+      <workItem from="1583750905772" duration="471000" />
+      <workItem from="1583819002446" duration="42000" />
+      <workItem from="1586844998460" duration="4000" />
+      <workItem from="1586850156994" duration="124000" />
+      <workItem from="1586913165481" duration="214000" />
+      <workItem from="1586917381215" duration="656000" />
+      <workItem from="1586935906540" duration="108000" />
+      <workItem from="1586957461207" duration="19000" />
+      <workItem from="1587088273083" duration="21000" />
+      <workItem from="1587113164575" duration="60000" />
+      <workItem from="1587560267734" duration="124000" />
+      <workItem from="1587611263358" duration="49000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1586913216030</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586913216030</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1586917404028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586917404028</updated>
+    </task>
+    <task id="LOCAL-00003" summary="砸金蛋和大转盘活动页面">
+      <created>1586935962028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586935962028</updated>
+    </task>
+    <task id="LOCAL-00004" summary="砸金蛋和大转盘活动页面">
+      <created>1586957475028</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586957475028</updated>
+    </task>
+    <task id="LOCAL-00005" summary="砸金蛋和大转盘活动页面">
+      <created>1587560334028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587560334028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="砸金蛋和大转盘活动页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="砸金蛋和大转盘活动页面" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="23" key="CommitChangelistDialog2" timestamp="1587560318568">
+      <screen x="0" y="23" width="1536" height="894" />
+    </state>
+    <state x="453" y="23" key="CommitChangelistDialog2/-1920.131.1920.1057/0.23.1536.937@0.23.1536.937" timestamp="1587088292156" />
+    <state x="604" y="163" key="CommitChangelistDialog2/-1920.131.1920.1057/0.23.2048.1257@0.23.2048.1257" timestamp="1586917403417" />
+    <state x="453" y="23" key="CommitChangelistDialog2/0.23.1536.894@0.23.1536.894" timestamp="1587560318568" />
+    <state x="453" y="23" key="CommitChangelistDialog2/0.23.1536.937@0.23.1536.937" timestamp="1586957474089" />
+    <state x="613" y="205" key="RollbackChangesDialog" timestamp="1587560336908">
+      <screen x="0" y="23" width="1536" height="894" />
+    </state>
+    <state x="817" y="294" key="RollbackChangesDialog/-1920.131.1920.1057/0.23.2048.1257@0.23.2048.1257" timestamp="1586913285033" />
+    <state x="613" y="205" key="RollbackChangesDialog/0.23.1536.894@0.23.1536.894" timestamp="1587560336908" />
+    <state x="-1192" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587611267515">
+      <screen x="-1920" y="131" width="1920" height="1057" />
+    </state>
+    <state x="-1192" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.131.1920.1057/0.23.1536.894@-1920.131.1920.1057" timestamp="1587611267515" />
+    <state x="582" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.131.1920.1057/0.23.1536.937@0.23.1536.937" timestamp="1587088283836" />
+    <state x="776" y="476" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.131.1920.1057/0.23.2048.1257@0.23.2048.1257" timestamp="1586917421357" />
+    <state x="582" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1536.894@0.23.1536.894" timestamp="1587560270409" />
+    <state x="582" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1536.937@0.23.1536.937" timestamp="1586957462386" />
+    <state x="679" y="404" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1057@0.23.1792.1057" timestamp="1583566933204" />
+    <state x="527" y="308" width="683" height="486" key="find.popup" timestamp="1583750914130">
+      <screen x="0" y="23" width="1792" height="1057" />
+    </state>
+    <state x="527" y="308" width="683" height="486" key="find.popup/0.23.1792.1057@0.23.1792.1057" timestamp="1583750914130" />
+    <state x="517" y="224" key="run.anything.popup" timestamp="1587560331538">
+      <screen x="0" y="23" width="1536" height="894" />
+    </state>
+    <state x="689" y="306" key="run.anything.popup/-1920.131.1920.1057/0.23.2048.1257@0.23.2048.1257" timestamp="1586913281077" />
+    <state x="517" y="224" key="run.anything.popup/0.23.1536.894@0.23.1536.894" timestamp="1587560331538" />
+  </component>
+</project>

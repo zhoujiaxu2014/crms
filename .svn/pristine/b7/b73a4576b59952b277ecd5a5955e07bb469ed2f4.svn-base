@@ -1,0 +1,43 @@
+.form_list {
+    border-top: 15px solid #e4e4e4;
+    margin-top: 20rpx;
+    padding: 50rpx 30rpx;
+    font-size: 14px;
+}
+.form_list > view {
+    margin-bottom: 40rpx;
+}
+.star {
+    color: red;
+    margin-right: 10rpx;
+}
+.form_list .van-cell {
+    height: 50px;
+    background-color: #F7F7F7;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.form_list .van-field__body {
+    height: 50px;
+    margin: 0;
+}
+.form_list .van-field__input {
+    height: 100%;
+    padding: 5px 0;
+}
+.submit_btn {
+    margin: 60rpx 0 100rpx 0;
+}
+.time_box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.dialog_tips {
+    text-align: center;
+    line-height: 80px;
+}
+.dialog_tips .van-icon {
+margin-right: 10rpx;
+}

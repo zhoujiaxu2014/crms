@@ -1,0 +1,4 @@
+<view>
+  <!-- <text bindtap='goAddress'>北京</text> -->
+  <address my-city="北京" data="{{city}}"></address>
+</view>

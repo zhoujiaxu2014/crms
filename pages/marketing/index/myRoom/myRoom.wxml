@@ -1,0 +1,54 @@
+<view class="content">
+    <view class="header">
+      <cover-image src="../../../../image/banner0.JPG"></cover-image>
+    </view>
+    <view class="form_list">
+        <view><span class="star">*</span>访问样板间：</view>
+        <view bindtap='goto'>
+            <van-field value="{{ room }}" placeholder="请选择样板间" bind:change="roomChange" icon="arrow" disabled />
+        </view>
+        <view><span class="star">*</span>访问时间：</view>
+        <view>
+            <van-field value="{{ time }}" placeholder="请选择访问开始时间" bind:change="timeChange" bindtap='getTime' icon="calender-o" disabled />
+            <van-field value="{{ timeEnd }}" placeholder="请选择访问结束时间" bind:change="timeChangeEnd" bindtap='getTimeEnd' icon="calender-o" disabled />
+        </view>
+        <!-- <input type="text" value="123"/> -->
+        <view><span class="star"></span>访问人数：</view>
+        <view><van-field value="{{ people }}" placeholder="请输入来访人数" bind:change="peopleChange" type='number' clearable /></view>
+    </view>
+    <view class="submit_btn">
+        <van-button type="primary" color="#F7B425" block bindtap='validateInfo'>提交</van-button>
+    </view>
+    <van-toast id="van-toast"></van-toast>
+    <!-- 开始时间 -->
+    <view class="time_box" wx:if='{{showTime==true}}'>
+        <van-datetime-picker
+            type="datetime"
+            value="{{ currentDate }}"
+            min-date="{{ minDate }}"
+            bind:confirm='getTimeData'
+            bind:cancel='cancelTime'
+        />
+    </view>
+    <!-- 结束时间 -->
+    <view class="time_box" wx:if='{{showTimeEnd==true}}'>
+        <van-datetime-picker
+            type="datetime"
+            value="{{ currentDateEnd }}"
+            min-date="{{ minDateEnd }}"
+            bind:confirm='getTimeDataEnd'
+            bind:cancel='cancelTimeEnd'
+        />
+    </view>
+    <!-- 提交弹窗 -->
+    <van-dialog
+        use-slot
+        title=""
+        show="{{ showDialog }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:confirm='submitRoom'
+        >
+        <view class="dialog_tips"><van-icon name="info" color='#F7B528' size='20' />确认提交该访问信息吗？</view>
+    </van-dialog>
+</view>

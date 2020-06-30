@@ -1,0 +1,376 @@
+page {
+  background-color: #f4f4f4;
+}
+.base-info-wrapper {
+  height: 200rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* background-image: url('');
+  background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%; */
+}
+
+.base-info-up {
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+}
+.index_home .dialog-index--van-dialog {
+  z-index: 10000;
+}
+/* 头像 */
+
+.headSculpture {
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+}
+
+/* 登录/注册 */
+
+.loginOrRegister {
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  background: transparent;
+  text-align: left;
+  letter-spacing: 2rpx;
+}
+
+.loginOrRegister::after,
+.messageBtn::after {
+  border: none !important;
+}
+
+/* 提示消息 */
+.messageBtn {
+  display: flex;
+  line-height: 40rpx !important;
+  color: #fff !important;
+  font-size: 24rpx !important;
+  border-radius: 40rpx 0 0 40rpx !important;
+  background: linear-gradient(to right, #f2b042 0%, #ee8031 100%);
+  border: none !important;
+  padding: 10rpx 20rpx;
+}
+
+/* 我的装修需求单 */
+
+.my-demand-list-wrapper {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.my-demand-list-wrapper .iconfont {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.my-demand-list-wrapper view {
+  font-size: 12px;
+}
+.title_room {
+  color: black !important;
+}
+.room_pass {
+  color: #f7b528;
+  margin-right: 10px;
+}
+.look_more {
+  line-height: 60px;
+  text-align: center;
+  color: #a2a2a2;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+  font-size: 12px;
+}
+.room_list {
+  margin-top: 20rpx;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 100rpx;
+  padding: 0 0 100rpx 0;
+}
+.room_list > h1 {
+  color: #131336;
+  font-weight: bold;
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  line-height: 120rpx;
+}
+.img_list {
+  width: 100%;
+  text-align: left;
+}
+.img_box {
+  display: inline-block;
+  width: 33%;
+  margin-top: 10px;
+  text-align: center;
+}
+.img_box > .list_name_word {
+  font-size: 12px;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* .my-demand-list-wrapper > h1 {
+  color: #131336;
+  font-weight: bold;
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  line-height: 80rpx;
+}
+
+.my-demand-list-wrapper > span {
+  color: #b2b2b2;
+  font-size: 24rpx;
+  letter-spacing: 1rpx;
+  line-height: 60rpx;
+} */
+
+.demand-list-merit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20rpx 0;
+}
+
+.demand-list-merit > view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.demand-list-icon {
+  font-size: 24px;
+  padding: 10rpx 0;
+}
+
+.demand-list-merit > view > span:first-of-type {
+  font-size: 24rpx;
+  color: #1d1d1d;
+  line-height: 40rpx;
+}
+
+.demand-list-merit > view > span:last-of-type {
+  font-size: 20rpx;
+  color: #a6a6a6;
+  line-height: 40rpx;
+}
+
+.addDemandBtn {
+  padding: 0 40rpx !important;
+  margin-bottom: 40rpx;
+  margin-top: 10rpx;
+  letter-spacing: 4rpx;
+}
+
+/* 我的参与的活动 */
+
+.my-activities-wrapper {
+  margin-top: 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.my-activities-wrapper > h1 {
+  color: #131336;
+  font-weight: bold;
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  line-height: 80rpx;
+}
+
+.my-activities-item {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.my-activities-title {
+  font-size: 12px;
+  color: rgb(19, 19, 19);
+}
+
+.my-activities-title > span {
+  display: inline-block;
+  width: 4rpx;
+  height: 30rpx;
+  background-color: #84c6e9;
+  margin-right: 10rpx;
+  margin-bottom: -4rpx;
+}
+
+.my-activities-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  margin-top: 10px;
+}
+
+.my-activities-image {
+  margin: 0 10rpx;
+}
+
+.my-activities-content > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-activities-content > ul > li {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: rgb(153, 153, 153);
+}
+
+.shouquan {
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+}
+
+.shouquan .van-icon {
+  font-size: 20px;
+  color: #ee8031;
+  margin-right: 10px;
+}
+
+.itemDemond {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.dmontItem {
+  border: 1px solid #e4e4e4;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.dmontItem > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.dmontItem > ul > li {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: rgb(153, 153, 153);
+}
+
+.nomoreData {
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 40rpx;
+  color: #a2a2a2;
+}
+
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25rpx;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #f7f7f7;
+  padding: 10px;
+  background: #fff;
+}
+
+.tabBar > view {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+button {
+  border: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.headImg {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  margin-left: 60rpx;
+  margin-right: 30rpx;
+}
+
+.my-demand-list-wrapper .van-button__text {
+  line-height: 22px;
+}
+
+.active {
+  color: #ef8532;
+}
+
+/* .itemDemond:last-child {
+  margin-bottom: 60px!important;
+}
+.my-activities-item:last-child {
+  margin-bottom: 60px;
+} */
+
+.nothing {
+  line-height: 80px;
+  width: 100%;
+  height: 100rpx;
+}
+.right_icon {
+  position: relative;
+}
+.icon_status {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  color: #e4e4e4;
+  font-size: 46px;
+}
+.myRoom_list > ul > li {
+  font-size: 11px;
+}
+
+
+
+.rowDemand .van-row {
+  margin: 0!important;
+  text-align: left;
+  font-size: 16px;
+}
+.offer_item {
+  margin-bottom: 50px;
+}
+/* tab栏 */
+.tabBar_box {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  padding:  20rpx 0;
+  border-top: 1px solid #e4e4e4;
+  background-color: #FFFFFF;
+  color: #B7B7B7;
+  z-index: 9999;
+}
+.tabBar_box > view {
+  width: 25%;
+}
+.tabBar_box > view >image {
+  height: 50rpx;
+  width: 50rpx;
+  z-index: 999999999;
+}

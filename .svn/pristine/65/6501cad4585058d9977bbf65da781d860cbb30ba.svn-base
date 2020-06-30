@@ -1,0 +1,8 @@
+{
+   "navigationBarTitleText": "幸运大转盘",
+   "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#FC3D42",
+   "usingComponents": {
+      "zhuanpan": "/components/zhuanpan/zhuanpan"
+   }
+}

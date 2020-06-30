@@ -1,0 +1,29 @@
+page{
+  background-color: #F0F0F0;
+}
+.detail {
+  padding: 20rpx;
+}
+.detail_item {
+  border: 1px solid #e4e4e4;
+  padding: 20rpx;
+  color: #686868;
+  font-size: 13px;
+  background-color: #fff;
+  box-shadow: 1px 8px 18px 10px #e4e4e4;
+  margin-bottom: 10px;
+}
+.detail_item > view {
+  line-height: 50rpx;
+  
+}
+.detail_item > view:first-child {
+  color: #404040;
+  font-size: 16px;
+  font-weight: 540;
+}
+.not {
+  line-height: 30px;
+  color: #686868;
+  text-align: center;
+}

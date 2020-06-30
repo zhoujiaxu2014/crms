@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-image": "../../miniprogram_npm/@vant/weapp/image/index"
+  },
+  "navigationBarTitleText": "我的活动",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#FC3D42"
+}

@@ -1,0 +1,210 @@
+page {
+  background-color: #F2F2F2;
+}
+.content {
+  width: 750rpx;
+}
+.wisdomOffer .van-button {
+  border-radius: 20px;
+  width: 90%;
+  border: 1px solid #d84a4f !important;
+  box-shadow: 1px 5px 5px 1px #d1d4d7;
+  /* box-shadow: 10px 10px 15px -10px; */
+  /* background-color: #fc3d42; */
+}
+.wisdomOffer {
+  width: 100%;
+  bottom: -40rpx;
+  position: absolute;
+}
+.banner {
+  width: 750rpx;
+  position: relative;
+  text-align: center;
+}
+.banner swiper {
+  width: 100%;
+}
+.banner swiper,
+.banner swiper image {
+  width: 750rpx;
+}
+/* .activityImg {
+  
+} */
+.yellow {
+  color: #f7b425;
+}
+.list {
+  border-radius: 4rpx;
+  overflow: hidden;
+  background: #fff;
+  margin: 20rpx;
+  padding-top: 10rpx;
+  box-shadow: 10px 8px 18px 1px #d5d5d7;
+}
+.list > .top {
+  justify-content: space-between;
+  padding-right: 20rpx;
+  font-size: 25rpx;
+}
+.aside {
+  width: 6rpx;
+  height: 30rpx;
+  background: #84c7f1;
+  margin: 3rpx 8px;
+  display: inline-block;
+  line-height: 0;
+}
+.inner_top {
+  display: flex;
+}
+.list > .top > .tipLeft {
+  background: #84c7f1;
+  width: 80rpx;
+  color: #fff;
+  display: flex;
+  font-size: 25rpx;
+  padding: 5rpx;
+}
+.list > .top > .tipLeft > .triangle {
+  width: 0;
+  height: 0;
+  border: 10rpx solid transparent;
+  border-left: 0;
+  border-right: 10rpx solid #fff;
+  margin: 6rpx 0 0 15rpx;
+}
+.tipRight {
+  background: #84c5e3;
+  color: #fff;
+  width: 80rpx;
+  font-size: 25rpx;
+  height: 30rpx;
+  padding: 3rpx;
+}
+.middle {
+  display: flex;
+  padding: 20rpx;
+}
+.listText {
+  margin-left: 28rpx;
+}
+.listText li {
+  display: block;
+  color: #a2a2a2;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  /* margin-bottom: 10rpx; */
+}
+.listBottom {
+  color: #f7b425;
+  background: #fcfafb;
+}
+.icon {
+  margin: 3rpx 10rpx 0 0;
+}
+.Time {
+  display: flex;
+}
+.area {
+  background: #fff;
+  padding: 20rpx;
+}
+.area > view {
+  font-size: 25rpx;
+  /* display: flex; */
+  justify-content: space-between;
+}
+.image-container {
+  align-items: center; /** 垂直居中*/
+  display: flex;
+  justify-content: center; /** flex 属性， 水平居中**/
+}
+
+.cityPicker {
+  width: 100%;
+}
+.cityPicker picker {
+  width: 100%;
+}
+.icon-right {
+  float: right;
+}
+.notListData {
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 40rpx;
+  margin-bottom: 80rpx;
+  color: #a2a2a2;
+}
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25rpx;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #f7f7f7;
+  padding: 10px;
+  background: #fff;
+}
+.tabBar > view {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+button {
+  border: 0 !important;
+  line-height: 1.2 !important;
+}
+.displayLiOne {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.displayLi {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.else_activity {
+  width: 45%;
+  height: 125px;
+  padding-right: 5px;
+  box-shadow: 5px 8px 10px 1px #d1d4d7;
+  text-align: center;
+  line-height: 125px;
+  color: #646464;
+}
+.else_activity > van-icon {
+  color: #FC3D42;
+  margin-right: 20rpx;
+  font-size: 26px;
+  vertical-align: middle;
+}
+/* tab栏 */
+.tabBar_box {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  padding:  20rpx 0;
+  border-top: 1px solid #e4e4e4;
+  background-color: #FFFFFF;
+  color: #B7B7B7;
+}
+.tabBar_box > view {
+  width: 25%;
+}
+.tabBar_box > view >image {
+  height: 50rpx;
+  width: 50rpx;
+  z-index: 999999999;
+}

@@ -1,0 +1,21 @@
+page{
+  background: #F0EFF2
+}
+.nav{
+  display: flex;
+  text-align: center; 
+}
+.kehu{
+  border: red 1rpx solid;
+ border-radius: 10rpx ;
+ margin: 30rpx;
+ font-size: 25rpx;
+ padding: 15rpx;
+ background: #fff
+}
+.van-tabs__line{
+  background-color: #F8BA35!important
+}
+.info{
+  color: gray
+}

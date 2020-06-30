@@ -1,0 +1,25 @@
+<view class="activity">
+  <view class="activity_list" wx:for='{{activeList}}' wx:key='{{index}}'>
+    <view class="activity_list_left">
+      <van-image width="240rpx" height="200rpx" src="../../../../image/best.jpg" custom-class="my-activities-image" />
+    </view>
+    <view class="activity_list_right">
+      <view style="color: #343434;font-size: 16px;">{{item.activityName}}</view>
+      <view style="color: #8C8C8C;font-size: 13px;">{{item.item.startTime}}-{{item.item.endTime}}</view>
+      <view class="activity_des">{{item.activityDesc}}</view>
+    </view>
+  </view>
+  <!-- <view class="activity_list">
+    <view class="activity_list_left">
+      <van-image width="240rpx" height="200rpx" src="../../../../image/best.jpg" custom-class="my-activities-image" />
+    </view>
+    <view class="activity_list_right">
+      <view style="color: #343434;font-size: 16px;">我是活动名称我是活动名称</view>
+      <view style="color: #8C8C8C;font-size: 13px;">2020-09-01-2020-03-04</view>
+      <view class="activity_des"
+        >我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介我是活动简介</view
+      >
+    </view> -->
+  <!-- </view> -->
+  <view class="nomoreData" wx:if='{{notData==1}}' style="line-height:40px;">没有更多了</view>
+</view>

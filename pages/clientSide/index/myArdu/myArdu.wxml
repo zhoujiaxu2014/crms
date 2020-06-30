@@ -1,0 +1,286 @@
+<wxs src="../../../../wxs/subutil.wxs" module="tools" />
+<!-- <template is="tabBar" data="{{menus}}"></template> -->
+<view  style="margin-bottom:50rpx;width: 100%;position: relative;" class="index_home">
+  <view style="height: 180rpx;background-color: #FC3D42;width: 100%;"></view>
+  <view class="offer_item" style="z-index: 1999;padding: 0 10px 30px 10px;position: absolute;top: 20px;left: 0;right: 0;text-align: center;">
+    <view style="border: 1px solid #e4e4e4;background-color: #fff;box-shadow: 1px 8px 8px 1px #e4e4e4;border-radius: 10px;text-align: center;padding: 0 0 30px 0;">
+      <view style="display: flex;justify-content: center;">
+        <view style="height: 100rpx;width: 100rpx;margin-top: -10px;">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+      <open-data type="userNickName"></open-data>
+      <!-- 我的需求单 -->
+      <view style='margin: 20rpx 0;font-size: 40rpx;position: relative;line-height: 26px;color: #6E6E6E;'>
+        我的需求单
+        <view  wx:if='{{noMore==0}}' style='font-size: 24rpx;position: absolute;top: 0;right: 20px;' data-id='{{amountList.demandId}}' data-type='2' bindtap='goToPage'>
+          <image src='../../../../image/bianji.png' style="width: 24rpx;height: 24rpx;margin-right: 10rpx;"></image>
+          <span>编辑</span>
+        </view>
+      </view>
+      <van-row class="rowDemand" gutter="20" style="margin-bottom: 30px;color: #646464;" wx:if='{{noMore==0}}' style="margin: 0!important;padding: 0 10px;">
+        <van-col span="12" data-type='2'>
+          <view style="margin-bottom: 10px;"><image src='../../../../image/huxing.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>户型：{{amountList.demandRoom==null?'无':tools.str(amountList.demandRoom)}}</view>
+          <view><image src='../../../../image/city.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>城市：{{amountList.province==null?'无':amountList.province}}</view>
+        </van-col>
+        <van-col span="12">
+          <view style="margin-bottom: 10px;"><image src='../../../../image/mianji.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>面积：{{amountList.housingArea==null?0:amountList.housingArea}}m²</view>
+          <view><image src='../../../../image/yusuan.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>预算：{{amountList.demandBudget==null?0:amountList.demandBudget}}元</view>
+        </van-col>
+      </van-row>
+      <van-row gutter="20" style="margin-bottom: 30px;color: #646464;" wx:else>
+        <van-col span="12" data-type='2'>
+          <view style="margin-bottom: 10px;"><image src='../../../../image/huxing.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>户型：无</view>
+          <view><image src='../../../../image/city.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>城市：无</view>
+        </van-col>
+        <van-col span="12">
+          <view style="margin-bottom: 10px;"><image src='../../../../image/mianji.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>面积：无</view>
+          <view><image src='../../../../image/yusuan.png' style="width: 28rpx;height: 28rpx;margin-right: 20rpx;"></image>预算：无</view>
+        </van-col>
+      </van-row>
+    </view>
+    
+    <!-- 我的方案 -->
+    <view style="border: 1px solid #e4e4e4;background-color: #fff;box-shadow: 1px 8px 8px 1px #e4e4e4;text-align: center;padding: 20px 10px;margin-top: 10px;height: 350px;color: #646464;">
+      <view style="display: flex;align-items: center;height: 30px;line-height: 30px;" data-type='5' catchtap="goToPage">
+        <view style="width: 90%;text-align: left;">
+          <image src='../../../../image/mycase.png' style="width: 48rpx;height: 48rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+          我的方案
+        </view>
+        <view style="width: 10%;text-align: right;">
+          <image src='../../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;margin-right: 10rpx;"></image>
+        </view>
+      </view>
+      <view style="display: flex;align-items: center;margin-top: 60rpx;height: 30px;line-height: 30px;" data-type='6' catchtap="goToPage">
+        <view style="width: 90%;text-align: left;">
+          <image src='../../../../image/zhongjiang.png' style="width: 48rpx;height: 48rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+          中奖纪录
+        </view>
+        <view style="width: 10%;text-align: right;">
+          <image src='../../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;margin-right: 10rpx;"></image>
+        </view>
+      </view>
+      <view style="display: flex;align-items: center;margin-top: 60rpx;height: 30px;line-height: 30px;" data-type='7' catchtap="goToPage">
+        <view style="width: 90%;text-align: left;">
+          <image src='../../../../image/mycase.png' style="width: 48rpx;height: 48rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+          我的活动
+        </view>
+        <view style="width: 10%;text-align: right;">
+          <image src='../../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;margin-right: 10rpx;"></image>
+        </view>
+      </view>
+      <view style="display: flex;align-items: center;margin-top: 60rpx;height: 30px;line-height: 30px;" data-type='8' catchtap="goToPage" wx:if="{{rolesDesign == 1}}">
+        <view style="width: 90%;text-align: left;">
+          <image src='../../../../image/zhongjiang.png' style="width: 48rpx;height: 48rpx;margin-right: 20rpx;vertical-align: middle;"></image>
+          量房
+        </view>
+        <view style="width: 10%;text-align: right;">
+          <image src='../../../../image/fanhui.png' style="width: 14rpx;height: 18rpx;margin-right: 10rpx;"></image>
+        </view>
+      </view>
+      <view wx-else></view>
+    </view>
+  </view>
+  </view>
+  <!-- 授权弹窗 -->
+	<van-dialog use-slot title="授权登录" show="{{ dialogShow }}" confirmButtonText='点我授权' cancelButtonText='取消授权'
+  show-cancel-button confirm-button-open-type="getPhoneNumber" bind:cancel='onClose' bind:getphonenumber='getPhone'>
+   <view class="shouquan">
+     <van-icon name="aim" />
+     <span>请授权账号</span>
+   </view>
+ </van-dialog>
+ <!-- 二维码 -->
+ <van-popup show="{{ Qrshow }}" bind:close="closeQrcode" close-on-click-overlay>
+   <canvas class="canvas-code" canvas-id="myQrcode" style="background:#fff;width: 200px;height: 200px;" />
+   <view style='color: #000;font-size: 20rpx;padding: 10rpx;text-align: center;'>请到附近门店进行兑奖</view>
+   <view bindtap='closeQrcode' style='padding-top: 20rpx;color: #000;width: 100%;text-align: center;'><van-icon name="cross"></van-icon></view>
+ </van-popup>
+<!-- tab栏 -->
+<!-- <view class="tabBar_box">
+  <view bindtap='jump' data-num='1'>
+    <image src='../../../../image/shouyegrey.png'></image>
+    <view>首页</view>
+  </view>
+  <view bindtap='jump' data-num='2'>
+    <image src='../../../../image/offer.png'></image>
+    <view>智慧报价</view>
+  </view>
+  <view bindtap='jump' data-num='3'>
+    <image src='../../../../image/myStore.png'></image>
+    <view>社区店</view>
+  </view>
+  <view>
+    <image src='../../../../image/myicon.png'></image>
+    <view>我的</view>
+  </view>
+</view> -->
+
+
+
+<!-- <view>
+	<view class="base-info-wrapper">
+		<view class="base-info-up">
+			<open-data class='headImg' type="userAvatarUrl"></open-data>
+			<button class="loginOrRegister">
+				<open-data type="userNickName"></open-data>
+			</button>
+			<view class="messageBtn" wx:if="{{new}}">
+				<view>您的方案更新啦</view>
+			</view>
+		</view>
+	</view> -->
+	<!-- 设计师看 -->
+	<!-- <view class="my-demand-list-wrapper" wx:if="{{!isCustomer}}">
+		<van-row gutter="20">
+			<van-col span="12" data-type='3' catchtap="goToPage">
+				<icon class="iconfont icon-shangmenliangfang"></icon>
+				<view>量房验房</view>
+			</van-col>
+			<van-col span="12" data-type='99' catchtap="goToPage">
+				<icon class="iconfont icon-shangmenliangfang"></icon>
+				<view>附近的店</view>
+			</van-col>
+		</van-row>
+	</view> -->
+	<!-- 客户可看 -->
+	<!-- <view class="my-demand-list-wrapper" wx:else>
+		<van-row gutter="20">
+			<van-col span="6" data-type='2' catchtap="goToPage">
+				<icon class="iconfont icon-baojiadan"></icon>
+				<view>智能报价</view>
+			</van-col>
+			<van-col span="6">
+				<icon class="iconfont icon-quanjing"></icon>
+				<view>720°全景</view>
+			</van-col>
+			<van-col span="6" data-type='5' catchtap="goToPage">
+				<icon class="iconfont icon-chanpin"></icon>
+				<view>我的方案</view>
+			</van-col>
+			<van-col span="6" data-type='99' catchtap="goToPage">
+				<icon class="iconfont icon-shangmenliangfang"></icon>
+				<view>附近的店</view>
+			</van-col>
+		</van-row>
+	</view> -->
+	<!-- 我的参与的活动 -->
+	<!-- <van-tabs active="{{ active }}" color='#EF8532' bind:change='changeTab'>
+		<van-tab title="我的活动">
+			<view class="my-activities-wrapper">
+				<view class="my-activities-item" wx:for='{{activeList}}' wx:key='{{index}}'>
+					<h1 class="my-activities-title">
+						<span></span>{{item.activityName}}</h1>
+					<view class="my-activities-content">
+						<van-image width="80" height="80" src="{{item.activityPic}}" custom-class="my-activities-image" />
+						<ul>
+							<li>活动简介：{{item.activityDesc}}</li>
+							<li>活动开始时间：
+								<span>{{item.startTime}}</span>
+							</li>
+							<li>活动结束时间：
+								<span>{{item.endTime}}</span>
+							</li>
+						</ul>
+					</view>
+				</view>
+			</view>
+			<view class="nomoreData" wx:if='{{notData==1}}' style="line-height:40px;">没有更多了</view>
+			<view class="nothing"></view>
+		</van-tab>
+		<van-tab title="我的需求单">
+			<view class="my-activities-wrapper">
+				<view class="itemDemond" data-type='2' data-id='{{item.demandId}}' bindtap='goToPage' wx:for='{{amountList}}'
+				 wx:key='{{index}}'>
+					<view class="dmontItem">
+						<ul>
+							<li>户型：{{item.demandRoom}}</li>
+							<li>所在城市：
+								<span>{{item.province}},{{item.city}}</span>
+							</li>
+							<li>预算：
+								<span>{{item.demandBudget}}</span>
+							</li>
+							<li>房屋面积：
+								<span>{{item.housingArea}}</span>
+							</li>
+						</ul>
+					</view>
+				</view>
+			</view>
+			<view class="nomoreData" wx:if='{{noMore==1}}' catchtap="goToPage">
+				你还没有需求信息哦
+				<view style="color:#59a5d4;line-height: 30px;">无门槛领取设计方案,一比一设计，上千套设计方案快来领取~~</view>
+			</view>
+			<view class="nothing"></view>
+		</van-tab>
+		<van-tab title="我的奖品">
+			<view style='margin: 20rpx;background-color: #fff;border-radius: 20rpx;box-shadow: 2px 2px 2px #ccc;display: flex;font-size: 24rpx;'
+			 wx:for='{{winningList}}' bindtap='lockQr'  data-gid='{{item}}'>
+				<view style='width: 200rpx;height: 200rpx;margin: 10rpx;border-radius: 20rpx;overflow: hidden;'>
+					<image src='{{item.awardPath}}' style='width: 100%;height: 100%;'></image>
+				</view>
+				<view>
+					<view style='padding:10px'>{{item.awardName}}</view>
+					<view style='padding:10px'>兑奖结束：{{item.rewardTime}}</view>
+					<view style='color: #F8C35C;padding:10px'>点击查看领取码</view>
+				</view>
+			</view>
+			<view class="nomoreData" wx:if='{{winningList.length==0}}' style="line-height:40px;">没有更多了</view>
+    </van-tab> -->
+    <!-- ------不要 -->
+		<!-- <van-tab title="我的样板间">
+      <view class="my-activities-wrapper">
+        <view class="my-activities-item" wx:for='{{roomList}}' wx:key='{{index}}' data-id='{{item.id}}' bindtap='gotoDetail'>
+          <h1 class="my-activities-title">
+            <span></span>{{item.sampleRoomName}}</h1>
+          <view class="my-activities-content myRoom_list">
+            <van-image width="100" height="100" src="../../../../image/table.jpg" custom-class="my-activities-image" />
+            <ul class="right_icon">
+              <li class="title_room">{{item.customerName}}</li>
+              <li>参观时间：
+                <span>{{tools.sub(item.startTime)}} 至 {{tools.sub(item.expireTime)}}</span>
+              </li>
+              <li>参观地点：
+                <span>{{item.sampleRoomProvince}}{{item.sampleRoomCity}}{{item.sampleRoomArea}}{{item.sampleRoomDistrict}}{{item.sampleRoomNumber}}</span>
+              </li>
+              <li>开门密码：
+                <span class="room_pass">{{item.visitPass==null?'待核发':item.visitPass}}</span>
+                <span>参观人数：{{item.visitorNum}}人</span>
+              </li>
+              <icon wx:if='{{item.visitStatus==2}}' class="iconfont icon-yijieshu icon_status"></icon>
+            </ul>
+          </view>
+        </view>
+      </view>
+      <view wx:if='{{noMoreRoom==0}}' class="look_more" bindtap='clickMoreRoom'>点击查看更多<van-icon name="arrow-down" /></view>
+      <view wx:else class="look_more">没有更多了</view>
+      <view class="room_list">
+        <h1>一站式样板间，所看即所得</h1>
+        <view class="img_list" wx:if='{{notRoom==0}}'>
+          <view class="img_box" wx:for="{{imgList}}" wx:key='{{index}}' catchtap="gotemplateDetail">
+            <van-image width="80" height="80" src="../../../../image/best.jpg" custom-class="my-activities-image" />
+            <view class="list_name_word">{{item.sampleRoomName}}</view>
+          </view>
+        </view>
+        <view wx:else class="look_more">没有更多了</view>
+      </view>
+    </van-tab> -->
+  <!-- </van-tabs> -->
+  <!-- ------不要 -->
+	<!-- <van-toast id="van-toast"></van-toast> -->
+	<!-- 授权弹窗 -->
+	<!-- <van-dialog use-slot title="授权登录" show="{{ dialogShow }}" confirmButtonText='点我授权' cancelButtonText='取消授权'
+	 show-cancel-button confirm-button-open-type="getPhoneNumber" bind:cancel='onClose' bind:getphonenumber='getPhone'>
+		<view class="shouquan">
+			<van-icon name="aim" />
+			<span>请授权账号</span>
+		</view>
+	</van-dialog> -->
+	<!-- 二维码 -->
+	<!-- <van-popup show="{{ Qrshow }}" bind:close="closeQrcode" close-on-click-overlay>
+		<canvas class="canvas-code" canvas-id="myQrcode" style="background:#fff;width: 200px;height: 200px;" />
+		<view style='color: #000;font-size: 20rpx;padding: 10rpx;text-align: center;'>请到附近门店进行兑奖</view>
+		<view bindtap='closeQrcode' style='padding-top: 20rpx;color: #000;width: 100%;text-align: center;'><van-icon name="cross" /></view>
+	</van-popup> -->
+<!-- </view> -->

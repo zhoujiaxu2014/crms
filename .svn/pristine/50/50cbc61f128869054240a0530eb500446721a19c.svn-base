@@ -1,0 +1,61 @@
+page {
+    background-color: #F2F2F2;
+}
+.detail_page {
+    margin-top: 30rpx;
+    background-color: #fff;
+    padding: 40rpx 30rpx 100rpx 30rpx;
+}
+.deatail_list li {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #F2F2F2;
+    line-height: 60rpx;
+    font-size: 13px;
+    color: #9FA3A6;
+}
+.deatail_list li > view {
+    display: inline-block;
+}
+.deatail_list li > view:first-child {
+    width: 40%;
+}
+.deatail_list li > view:last-child {
+    flex: 1;
+}
+.auditBtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.color_yellow {
+    color: #F7B425;
+}
+.click_more {
+    margin-left: 60rpx;
+    color: #F7B425;
+}
+.deatail_list .van-cell {
+    padding: 0;
+    height: 60rpx;
+}
+.deatail_list .van-field__body {
+    height: 60rpx;
+}
+.color_black {
+    color: black;
+}
+.start_time {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.dialog_tips {
+    text-align: center;
+    line-height: 80px;
+}
+.dialog_tips .van-icon {
+margin-right: 10rpx;
+}

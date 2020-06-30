@@ -1,0 +1,139 @@
+<!-- <view style="height: 180rpx;background-color: #FC3D42;width: 100%;position: fixed;margin-top: 0;z-index: 0;"></view> -->
+<view style="margin-bottom:50rpx;width: 100%;position: relative;">
+  <view style="height: 180rpx;background-color: #FC3D42;width: 100%;"></view>
+  <!-- 户型start -->
+  <view class="offer_item" style="z-index: 9999;padding: 0 10px;position: absolute;top: 20px;left: 0;right: 0;">
+    <view style="border: 1px solid #D2D2D2; background-color: #fff;box-shadow: 1px 8px 8px 1px #D2D2D2;border-radius: 10px;margin-bottom: 50px;">
+      <view class="demand-item" style="text-align: left;">
+        <h1>户型</h1>
+        <view class="huxing_radio">
+          <van-radio-group value="{{ radioHu }}" bind:change="onChangeHu" style="display: inline-flex;width: 100%;">
+          <!-- <view class="icon-item " wx:for='{{huxingList}}' data-type='{{item.type}}' data-num='{{index}}' bindtap='getHuXing'> -->
+            <!-- <van-image width="60rpx" height="60rpx" class="headSculpture" src="{{item.img}}" /> -->
+            <van-radio wx:for='{{huxingList}}' name="{{index}}" wx:key='{{index}}' data-type='{{item.type}}' icon-size="12px" checked-color="#FC3D42">{{item.type}}</van-radio>
+            <!-- <span class="{{flag==index?'changeColor':''}}">{{item.type}}</span> -->
+          <!-- </view> -->
+        </van-radio-group>
+        </view>
+      </view>
+      <!-- 户型end -->
+
+      <!-- 装修类型start -->
+      <view class="demand-item">
+        <h1>装修类型</h1>
+        <view class="huxing_radio">
+          <van-radio-group value="{{ radioType }}" bind:change="onChangeType" style="display: inline-flex;width: 100%;">
+            <van-radio wx:for='{{zhuangxiuType}}' name="{{index}}" wx:key='{{index}}' icon-size="12px" checked-color="#FC3D42">{{item.type}}</van-radio>
+        </van-radio-group>
+        </view>
+        <!-- <view class="demand-detail">
+          <view class="icon-item" wx:for='{{zhuangxiuType}}' data-type='{{index}}' bindtap='renovationType'>
+            <van-image width="60rpx" height="60rpx" class="headSculpture" src="{{item.img}}" />
+            <span class="{{tag==index?'changeColor':''}}">{{item.type}}</span>
+          </view>
+        </view> -->
+      </view>
+      <!-- 装修类型end -->
+
+      <!-- 装修方式start -->
+      <view class="demand-item">
+        <h1>装修方式</h1>
+        <view class="huxing_radio">
+          <van-radio-group value="{{ radioMethods }}" bind:change="onChangeMethods" style="display: inline-flex;width: 100%;">
+            <van-radio wx:for='{{zhuangMethods}}' wx:key='{{index}}' name="{{index+1}}" icon-size="12px" checked-color="#FC3D42">{{item.type}}</van-radio>
+        </van-radio-group>
+        </view>
+        <!-- <view class="demand-detail">
+          <view class="icon-item">
+            <van-button round type="info" size="small" plain color="{{btn==1?'red':'#404040'}}" custom-class="btn-item" data-method='1' bindtap='demandMethod'>清包</van-button>
+          </view>
+          <view class="icon-item">
+            <van-button round type="info" size="small" plain color="{{btn==2?'red':'#404040'}}" custom-class="btn-item" data-method='2' bindtap='demandMethod'>半包</van-button>
+          </view>
+          <view class="icon-item">
+            <van-button round type="info" size="small" plain color="{{btn==3?'red':'#404040'}}" custom-class="btn-item" data-method='3' bindtap='demandMethod'>全包</van-button>
+          </view>
+        </view> -->
+      </view>
+      <!-- 装修方式end -->
+
+      <!-- 装修档次start -->
+      <view class="demand-item">
+        <h1>装修档次</h1>
+        <view class="demand-detail">
+          <view class="icon-item" wx:for='{{dangciList}}' data-num='{{index}}' bindtap='levalChange'>
+            <van-image width="150rpx" height="150rpx" class="headSculpture" src="{{item.img}}" round/>
+            <span class="{{leval==index?'changeColor':''}}">{{item.type}}</span>
+          </view>
+          <!-- <view class="icon-item">
+            <van-image width="150rpx" height="150rpx" class="headSculpture" src="/image/sofa.png" round/>
+            <span>舒适享受</span>
+          </view>
+          <view class="icon-item">
+            <van-image width="150rpx" height="150rpx" class="headSculpture" src="/image/best.png" round/>
+            <span>豪华高档</span>
+          </view> -->
+        </view>
+      </view>
+      <!-- 装修档次end -->
+      <van-row class="select-wrapper">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <van-cell title="房屋所在城市" is-link icon="hotel-o" value="{{province+city}}" custom-class="selectInfo" /> 
+        </picker>
+        
+      </van-row>
+      <van-row class="select-wrapper">
+        <van-col span="8">
+          <van-cell title="房屋面积" icon="hotel-o" custom-class="selectInfo" />
+        </van-col>
+        <van-col span="16">
+          <van-field
+            value="{{ mesureNum }}"
+            placeholder="单位m²"
+            type="number"
+            bind:change="onChangeMesure"
+          />
+        </van-col>
+        
+      </van-row>
+      <van-row class="select-wrapper">
+        <van-col span="8">
+          <van-cell title="预算" icon="hotel-o" custom-class="selectInfo" />
+        </van-col>
+        <van-col span="16">
+          <van-field
+            value="{{ bugetNum }}"
+            placeholder="元"
+            type="number"
+            bind:change="onChangeBuget"
+          />
+        </van-col>
+      </van-row>
+      <view style="text-align: center;width: 100%;">
+        <van-button wx:if='{{showBtn==1}}' class="btnClass" type="primary" block color="#FC3D42" size="normal" custom-class="submitBtn" bind:click="submitDemand">提交</van-button>
+        <!-- <van-button wx:if='{{showBtn==2}}' class="btnClass" block color="#FC3D42" size="normal" custom-class="submitBtn" bind:click="deleteDemond">删除</van-button> -->
+        <van-button wx:if='{{showBtn==2}}' class="btnClass" type="primary" block color="#FC3D42" size="normal" custom-class="submitBtn" bind:click="auditDemond">修改</van-button>
+      </view>
+      <van-toast id="van-toast"></van-toast>
+    </view>
+  </view>
+</view>
+<!-- tab栏 -->
+<!-- <view class="tabBar_box">
+  <view bindtap='jump' data-num='1'>
+    <image src='../../../../../image/shouyegrey.png'></image>
+    <view>首页</view>
+  </view>
+  <view>
+    <image src='../../../../../image/redbaijia.png'></image>
+    <view>智慧报价</view>
+  </view>
+  <view bindtap='jump' data-num='2'>
+    <image src='../../../../../image/myStore.png'></image>
+    <view>社区店</view>
+  </view>
+  <view bindtap='jump' data-num='3'>
+    <image src='../../../../../image/my.png'></image>
+    <view>我的</view>
+  </view>
+</view> -->

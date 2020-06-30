@@ -1,0 +1,55 @@
+.index_home {
+  margin-bottom: 50rpx;
+  width: 100%;
+  position: relative;
+}
+.offer_item {
+  z-index: 1999;
+  padding: 0 10px 30px 10px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.prince_list {
+  border: 1px solid #e4e4e4;
+  background-color: #fff;
+  box-shadow: 1px 8px 8px 1px #e4e4e4;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  min-height: 200px;
+}
+.prince_list_item {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.prince_list_item_middle {
+  width: 30%;
+}
+.prince_list_item_left {
+  width: 50%;
+}
+.prince_list_item_right {
+  width: 20%;
+  line-height: 53px;
+}
+.last_word {
+  color: #b2b2b2;
+  font-size: 24rpx;
+}
+.prince_list_item_right .van-button--small {
+  padding: 0 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.prince_list_item_middle > image {
+  width: 120rpx;
+  height: 120rpx;
+}

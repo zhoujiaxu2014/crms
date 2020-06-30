@@ -1,0 +1,28 @@
+<view>
+  <view class="index_home">
+    <view
+      style="height: 180rpx; background-color: #fc3d42; width: 100%;"
+    ></view>
+    <view class="offer_item">
+      <view class="prince_list">
+        <view class="prince_list_item" wx:for="{{ winningList }}" wx:if="{{dataHas==0}}">
+          <view class="prince_list_item_middle">
+            <image src='{{item.awardPath}}'></image>
+          </view>
+          <view class="prince_list_item_left">
+            <view style="color: #5d5d5d;">{{ item.awardName }}</view>
+            <view class="last_word">{{ item.luckyDrawName }}</view>
+            <view class="last_word">{{ item.rewardTime }}</view>
+          </view>
+          <view class="prince_list_item_right">
+            <van-button wx:if="{{ item.rewardState == 0 }}" color="#FC3D42" size="small" bindtap='lockQr'  data-gid='{{item}}'>领取</van-button>
+            <van-button wx:if="{{ item.rewardState == 1 }}" color="#9D9D9D" size="small" disabled>已领取</van-button>
+            <van-button wx:if="{{ item.rewardState == 2 }}" color="#FC3D42" size="small" disabled>已核销</van-button>
+          </view>
+        </view>
+        <view class="prince_list_item" style="color: #565656;border: none;"  wx:if="{{dataHas==1}}">暂无数据</view>
+      </view>
+      
+    </view>
+  </view>
+</view>

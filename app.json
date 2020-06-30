@@ -1,0 +1,114 @@
+{
+  "页面注释": {
+    "index": "营销端首页",
+    "toker": "拓客",
+    "intemationalWaters": "公海池",
+    "customer": "我的客户"
+  },
+  "pages": [
+    "pages/clientSide/index/myArdu/myArdu",
+    "pages/searchCity/searchCity",
+    "pages/my/offerDetail/offerDetail",
+    "pages/index/index",
+    "pages/my/chooicePlan/chooicePlan",
+    "pages/myActivity/myActivity",
+    "pages/myPrince/myPrince",
+    "pages/clientSide/index/myArdu/demandCollection/demandCollection",
+
+    "pages/active/activityCenter/activityCenter",
+    "pages/active/activeDetail/activeDetail",
+    "pages/active/share/share",
+    
+    "pages/marketing/index/myRoom/myRoom",
+    "pages/my/sevenTwoOcase/sevenTwoOcase",
+    "pages/my/templateRoom/templateDetail/templateDetail",
+    "pages/marketing/toker/weixinLink/weixinLink",
+    "pages/marketing/toker/customerScan/customerScan",
+
+    "pages/marketing/index/roomDetail/roomDetail",
+    "pages/marketing/index/roomList/roomList",
+    "pages/bluetooth/index",
+    "pages/ruler/isruler/ruler",
+    "pages/marketing/index/productDisplay/productDisplay",
+    "pages/my/contract/contract",
+    "pages/my/sto/sto",
+    "pages/ageActive/age",
+    "pages/RotaryTable/index",
+    "pages/Perfectinformation/index",
+    "pages/moreActiveList/active",
+    "pages/nearRoom/room",
+    "pages/measuringRuler/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "点击确定获取你的地理位置"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#FC3D42",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/shouyegrey.png",
+        "selectedIconPath": "image/homeImg.png"
+      },
+      {
+        "pagePath": "pages/clientSide/index/myArdu/demandCollection/demandCollection",
+        "text": "智慧报价",
+        "iconPath": "image/offer.png",
+        "selectedIconPath": "image/redbaijia.png"
+      },
+      {
+        "pagePath": "pages/nearRoom/room",
+        "text": "社区店",
+        "iconPath": "image/myStore.png",
+        "selectedIconPath": "image/shequdianred.png"
+      },
+      {
+        "pagePath": "pages/clientSide/index/myArdu/myArdu",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/myicon.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "../../miniprogram_npm/@vant/weapp/button/index",
+    "van-row": "../../miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "../../miniprogram_npm/@vant/weapp/col/index",
+    "van-goods-action": "../../miniprogram_npm/@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "../../miniprogram_npm/@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "../../miniprogram_npm/@vant/weapp/goods-action-button/index",
+    "van-toast": "../../miniprogram_npm/@vant/weapp/toast/index",
+    "van-tabs": "../../miniprogram_npm/@vant/weapp/tabs/index",
+    "van-tab": "../../miniprogram_npm/@vant/weapp/tab/index",
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "van-collapse": "../../miniprogram_npm/@vant/weapp/collapse/index",
+    "van-collapse-item": "../../miniprogram_npm/@vant/weapp/collapse-item/index",
+    "van-search": "../../miniprogram_npm/@vant/weapp/search/index",
+    "van-steps": "../../miniprogram_npm/@vant/weapp/steps/index",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "van-uploader": "../../miniprogram_npm/@vant/weapp/uploader/index",
+    "van-datetime-picker": "../../miniprogram_npm/@vant/weapp/datetime-picker/index",
+    "van-area": "../../miniprogram_npm/@vant/weapp/area/index",
+    "van-checkbox": "../../miniprogram_npm/@vant/weapp/checkbox/index",
+    "van-checkbox-group": "../../miniprogram_npm/@vant/weapp/checkbox-group/index",
+    "van-cell": "../../miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "../../miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-dialog": "../../miniprogram_npm/@vant/weapp/dialog/index",
+    "van-field": "../../miniprogram_npm/@vant/weapp/field/index",
+    "van-dropdown-menu": "../../miniprogram_npm/@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "../../miniprogram_npm/@vant/weapp/dropdown-item/index",
+    "van-image": "../../miniprogram_npm/@vant/weapp/image/index",
+    "van-overlay": "../../miniprogram_npm/@vant/weapp/overlay/index",
+    "wxParse": "/pages/wxParse/components/wxParse/wxParse"
+  },
+  "sitemapLocation": "sitemap.json"
+}

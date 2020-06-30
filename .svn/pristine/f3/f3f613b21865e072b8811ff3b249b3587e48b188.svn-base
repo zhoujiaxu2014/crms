@@ -1,0 +1,14 @@
+.templateDetail{
+    padding: 20rpx;
+    font-size: 25rpx;
+    color:#a2a2a2;
+    line-height:40rpx;
+}
+.h3{
+    color: #000;
+    line-height: 60rpx;
+}
+.content>view{
+    margin-bottom: 30rpx;
+    text-indent: 50rpx;
+}

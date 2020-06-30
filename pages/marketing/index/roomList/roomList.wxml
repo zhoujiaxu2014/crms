@@ -1,0 +1,63 @@
+<view>
+    <view class="search_top">
+        <van-row class="top_row">
+            <van-col span="4" bindtap='getLocationList'>
+                <van-icon name="location" color='#F7B528' size='20' />
+                <span class="address">{{city}}</span>
+                <!-- <van-icon name="arrow-down" color='#CDCDCD' /> -->
+            </van-col>
+            <van-col span="10">
+                <van-dropdown-menu>
+                    <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change='changeType' />
+                </van-dropdown-menu>
+            </van-col>
+            <van-col span="10">
+                <van-dropdown-menu>
+                    <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change='changeStyle' />
+                </van-dropdown-menu>
+            </van-col>
+        </van-row>
+    </view>
+    <view class="my-activities-wrapper">
+        <van-radio-group value="{{ radio }}" bind:change="onChange">
+            <view class="my-activities-item" wx:for='{{roomList}}'>
+                <h1 class="my-activities-title">
+                    <span></span>{{item.sampleRoomName}}
+                </h1>
+                <van-radio name="{{index}}" class="radio_box" checked-color="#F7B528" data-address='{{item.sampleRoomProvince}}' />
+                <view class="my-activities-content">
+                    <van-image width="100" height="100" src="../../../../image/sofa.jpg" custom-class="my-activities-image" />
+                    <ul>
+                        <li class="title_room">{{item.sampleRoomDesc}}</li>
+                        <li>风格：
+                            <span>{{item.sampleRoomStyle}}</span>
+                            <span class="distance">据您{{item.distance==null?0:item.distance}}km</span>
+                        </li>
+                        <li>房型：
+                            <span>{{item.sampleRoomType}}</span>
+                        </li>
+                        <li>地址：
+                            <span>{{item.sampleRoomProvince}}{{item.sampleRoomCity}}{{item.sampleRoomArea}}{{item.sampleRoomDistrict}}</span>
+                        </li>
+                        <li class="display_li">
+                            <span>{{item.sampleRoomDistrict}}</span>
+                        </li>
+                    </ul>
+                </view>
+            </view>
+        </van-radio-group>
+    </view>
+    <view class="notHaveData">没有数据了</view>
+    <van-toast id="van-toast"></van-toast>
+    <!-- 单选弹窗 -->
+    <van-dialog
+        use-slot
+        title=""
+        show="{{ showRoom }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:confirm='choiceRoom'
+        >
+            <view class="dialog_tips"><van-icon name="info" color='#F7B528' size='20' />确定选择该样板间吗？</view>
+    </van-dialog>
+</view>

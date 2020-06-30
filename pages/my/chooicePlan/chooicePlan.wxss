@@ -1,0 +1,274 @@
+page{
+    background:#F0EFF2; 
+}
+.validationPlan{
+    font-size: 25rpx;
+    color:#a2a2a2;
+}
+.baseInfo{
+    text-indent: 20rpx;
+}
+.baseInfo,.validate{
+    background: #fff;
+    margin: 10px 0;
+    line-height:50rpx;
+    padding: 20rpx 0;
+}
+.van-dialog__header {
+    color: #000;
+}
+.van-hairline--top-bottom:after{
+    border:0 !important;
+}
+.group{
+    margin-left: 20rpx;
+    display: flex;
+    color: #000;
+    font-size: 28rpx;
+}
+.table{
+    width:94%;
+    margin-left:3%;
+    color: #000;
+}
+.thead{
+    background: #ECEDF0;
+}
+.tr{
+    display: flex;
+    justify-content: space-between;
+}
+.td{
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+}
+/* 修改样式 */
+.index_home {
+  margin-bottom:50rpx;
+  width: 100%;
+  position: relative;
+}
+.case_box {
+  height: 180rpx;
+  background-color: #FC3D42;
+  width: 100%;
+}
+.case_box_content {
+  z-index: 1999;
+  padding: 0 10px 30px 10px;
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.case_box_content_list {
+  border: 1px solid #e4e4e4;
+  background-color: #fff;
+  box-shadow: 1px 8px 8px 1px #D1D1D1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0 0 30px 0;
+  min-height: 500px;
+}
+.steps_box {
+  height: 200rpx;
+  background-color: #FC3D42;
+  width: 100%;
+}
+.steps_box .van-steps {
+  background-color: #FC3D42;
+}
+.steps_box .van-step__title {
+  color: #fff;
+}
+.steps_content {
+  /* margin-top: 20px; */
+  display: flex;
+  padding: 80rpx 30rpx 20rpx 30rpx;
+  text-align: center;
+}
+.steps_first {
+  width: 8%;
+  z-index: 1998;
+}
+.steps_second {
+  width: 36%;
+}
+.steps_third {
+  width: 8%;
+  z-index: 1998;
+}
+.steps_four {
+  width: 36%;
+}
+.steps_five {
+  width: 8%;
+  z-index: 1998;
+}
+.num {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  /* padding: 2px 2px; */
+  color: #FC3D42;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  width: 100%;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-weight: bold;
+  z-index: 1999;
+}
+.numStyle {
+  color: #fff!important;
+  background-color: #FC3D42;
+}
+.line {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #E2373B;
+  z-index: 888;
+}
+.lineStyle {
+  background-color: #fff!important;
+}
+.steps_word {
+  font-size: 12px;
+  color: #fff;
+  width: 20px;
+  width: 100rpx;
+  margin-top: 10rpx;
+  margin-left: -10px;
+}
+.base_Info {
+  text-align: left;
+  border-bottom: 7px solid #F2F2F2;
+  color: #ABABAB;
+  font-size: 14px;
+  padding: 30rpx 20rpx;
+}
+.baseInfo_list > view {
+  line-height: 60rpx;
+}
+.myCase {
+  text-align: left;
+  color: #4E4E4E;
+  padding: 30rpx 20rpx;
+}
+.mycase_info {
+  display: flex;
+}
+.mycase_info_left {
+  width: 65%;
+  font-size: 16px;
+}
+.mycase_info_right {
+  width: 35%;
+  font-size: 13px;
+  color: #FD7D80;
+}
+.swiper_Img {
+  margin:20rpx 40rpx;
+  box-shadow: 3px 8px 18px 1px #76797C;
+  border-radius: 5px;
+  height: 120px;
+  /* width: 293px; */
+  /* border: 1px solid #76797C; */
+}
+.slide-image {
+  border-radius: 5px;
+  width: 100%;
+  height: 120px;
+  position: relative;
+  /* border: 1px solid #76797C; */
+  /* box-shadow: 1px 8px 18px 1px #76797C; */
+}
+.swiper_Img swiper {
+  height: 120px;
+}
+.caseNum {
+  background-color: #fff;
+  color: #FC3D42;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 130rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 11px;
+  text-align: center;
+  border-radius:0 0 100px 100px;
+  margin: auto;
+}
+.caseNumColor {
+  background-color: #FC3D42;
+  color: #fff;
+}
+.caseBtn .van-button {
+  width: 70%;
+}
+.princeInfo {
+  text-align: left;
+  color: #4E4E4E;
+  padding: 30rpx 20rpx;
+  border-top: 7px solid #F2F2F2;
+}
+.princeInfo_info {
+  display: flex;
+  margin-bottom: 10rpx;
+}
+.princeInfo_left {
+  width: 75%;
+  font-size: 16px;
+  color: #606060;
+}
+.princeInfo_right {
+  width: 25%;
+  font-size: 13px;
+  color: #FD7D80;
+  text-align: right;
+}
+.prince_detail {
+  display: flex;
+  line-height: 50rpx;
+}
+.prince_detail > view:first-child{
+  width: 75%;
+}
+.prince_detail > view:last-child{
+  width: 25%;
+  text-align: right;
+}
+.color_font_big {
+  font-size: 14px;
+  color: #404040;
+}
+.color_font_small {
+  font-size: 14px;
+  color: #A0A0A0;
+}
+.baojiaDialog .dialog-index--van-dialog__confirm .van-button__text {
+  color: #FC3D42;
+}
+.caseConfirmDialog .dialog-index--van-dialog__confirm .van-button__text {
+  color: #FC3D42;
+}
+.signContract .dialog-index--van-dialog__confirm .van-button__text {
+  color: #FC3D42;
+}
+.textarea-placeholder {
+  font-size: 12px!important;
+}
+.caseText textarea {
+  border: 1px solid #e4e4e4;
+  color: #B1B1B1;
+  border-radius: 3px;
+  width: 210px;
+  height: 80px;
+  line-height: 20px;
+  padding: 3px; 
+}

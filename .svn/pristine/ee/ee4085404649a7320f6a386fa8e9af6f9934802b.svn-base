@@ -1,0 +1,142 @@
+.content{
+    padding: 10rpx;
+    margin-bottom: 100rpx;
+}
+.header{
+    margin:10rpx;
+}
+.headerTitle{
+    font-size:32rpx;
+    font-weight:600;
+}
+.headerTip{
+    display: flex;
+    justify-content: space-between;
+    font-size:25rpx;
+    color: #a2a2a2;
+}
+.headerTip>p{
+    margin-top:30rpx;
+}
+.headerTip>p>text:nth-child(2){
+    color: #4f6ea2;
+    margin: 0 10px;
+}
+.QRcode>image{
+    width:100rpx;
+    height:100rpx;
+    margin-right: 100rpx;
+}
+.logo1{
+    width:25rpx;
+    height:25rpx;
+}
+.logo2{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
+}
+.logo-box{
+    width: 300rpx;
+    text-align: center;
+    margin-left: 225rpx;
+}
+.kong1,.kong2{
+    width: 300rpx;
+    height: 6rpx;
+    background:#606060;
+}
+.kong2{
+    height: 2rpx;
+    margin-top: 4rpx;
+}
+.headerPicture>image{
+    width:180rpx;
+    height:180rpx;
+    border-radius:90rpx;
+    margin:40rpx 0 30rpx 285rpx;
+}
+.divider{
+    margin: 0 30rpx;
+}
+.divider>.innerDivider{
+    border-bottom: 1px solid #000;
+    height: 40rpx;
+    text-align: center;
+}
+.divider>.innerDivider>span{
+ padding:0 40rpx;
+ margin-top:20rpx;
+ display: inline-block;
+ background: #fff;
+ font-size: 28rpx;
+}
+.textDetail{
+    font-size: 25rpx;
+    color: #a2a2a2;
+    line-height:60rpx;
+    padding: 10rpx;
+    margin-top:80rpx;
+}
+.image-container{ 
+    align-items: center;/** 垂直居中*/
+    display: flex;
+    justify-content: center; /** flex 属性， 水平居中**/
+   }
+   /* 底部bat */
+.footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding:10rpx 0;
+    font-size:20rpx;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+}
+.footer>button{
+    border:0 !important;
+    font-size:28rpx;
+    width:400rpx;
+    line-height:80rpx;
+    border-radius:40rpx;
+    margin:0;
+}
+/* 分享 */
+.share{
+    width:600rpx;
+    height:800rpx;
+    position:fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 250rpx;
+    margin: auto;
+    background: #fff;
+    }
+.shareBox{
+    text-align: center;
+    position: relative;
+    font-size: 26rpx;
+}
+.shareBottom{
+    position: absolute;
+    bottom: 0;
+    background:#fff; 
+}
+.innerShareBox{
+    display: flex;
+    justify-content: space-around;
+    padding:40rpx 0 80rpx;
+}
+.innerShareBox>button{
+    font-size: 26rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background:#fff;
+    border: 1px solid #f7b425;
+    color:#f7b425;
+}
+

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.wxss": "css",
+        "*.wxml": "html"
+    },
+    "svn.delete.ignoredRulesForDeletedFiles": [
+        "image\\banner0.JPG",
+        "image\\logo1.png",
+        "image\\sofa.jpg",
+        "image\\table.jpg",
+        "pages\\marketing\\index\\activityCenter"
+    ]
+}

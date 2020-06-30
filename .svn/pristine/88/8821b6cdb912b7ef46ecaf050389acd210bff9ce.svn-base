@@ -1,0 +1,105 @@
+.search_top {
+    line-height: 80rpx;
+    border-bottom: 8px solid #e4e4e4;
+    text-align: center;
+}
+.address {
+    color: #CDCDCD;
+    margin-left: 5rpx;
+}
+.my-activities-wrapper {
+    margin-top: 20rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20rpx;
+  }
+  
+  .my-activities-wrapper > h1 {
+    color: #131336;
+    font-weight: bold;
+    font-size: 28rpx;
+    letter-spacing: 1rpx;
+    line-height: 80rpx;
+  }
+  
+  .my-activities-item {
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 1px dashed #e4e4e4;
+  }
+  
+  .my-activities-title {
+    font-size: 12px;
+    color: rgb(19, 19, 19);
+  }
+  
+  .my-activities-title > span {
+    display: inline-block;
+    width: 4rpx;
+    height: 30rpx;
+    background-color: #84c6e9;
+    margin-right: 10rpx;
+    margin-bottom: -4rpx;
+  }
+  
+  .my-activities-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20rpx;
+    margin-top: 10px;
+  }
+  
+  .my-activities-image {
+    margin: 0 10rpx;
+  }
+  
+  .my-activities-content > ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .my-activities-content > ul > li {
+    font-size: 24rpx;
+    line-height: 40rpx;
+    color: rgb(153, 153, 153);
+  }
+  .title_room {
+      color: black!important;
+  }
+  .display_li {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .radio_box {
+      display: inline-block;
+      float: right;
+  }
+  .top_row {
+    line-height: 50px;
+  }
+  .distance {
+    margin-left: 10rpx;
+  }
+  .my-activities-item:last-child {
+    margin-bottom: 60px;
+  }
+  .notHaveData {
+    color: #CDCDD7;
+    text-align: center;
+    line-height: 60rpx;
+    margin-bottom: 60rpx;
+  }
+  .dialog_tips {
+    text-align: center;
+    line-height: 80px;
+  }
+  .dialog_tips .van-icon {
+    margin-right: 10rpx;
+  }

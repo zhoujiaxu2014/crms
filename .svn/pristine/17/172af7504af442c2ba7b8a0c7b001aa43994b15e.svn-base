@@ -1,0 +1,48 @@
+<view class="content">
+<view class="header">
+    <text class="headerTitle">{{activity.activityName}}</text>
+    <view class="headerTip">
+        <p><text>小DU</text><text>亚度大家居</text><text>{{activity.startTime}}</text></p>
+        <view class="QRcode"></view>
+    </view>
+</view>
+<view class="divider">
+    <view class="innerDivider">
+      <span><image mode="widthFix" src="../../../image/logo3.jpg" class="logo1"></image>拎包入住 就是亚度</span>
+    </view>
+</view>
+<view class="textDetail">
+    <text>{{activity.activityDesc}}</text>
+    <view class="image-container">
+        <image mode="widthFix" src="{{activity.activityPic}}"></image>
+    </view>
+    <text>活动范围：{{activity.province == null? "全国":activity.province}}{{activity.city == null?"":activity.city}}{{activity.area == null?"":activity.area}}</text>
+    <view style="text-align: center;text-decoration-line: underline;color: #f7b425" bindtap="goDetail" id= "{{activity.activityDetails}}">查看活动详情</view>
+</view>  
+</view>
+<!-- 底部bat -->
+<view class="footer">
+    <!-- <view>
+        <icon class="iconfont icon-icon-" style="font-size:40rpx;"></icon>
+        <view>关注</view>
+    </view> -->
+    <view bindtap="onClickShow">
+        <icon class="iconfont icon-dingdan" style="font-size:40rpx;"></icon>
+        <view>分享</view>
+    </view>
+    <button type="warn" style=" background-color: #f7b425;" bindtap="goCustomerScan" id="{{activity.activityId}}">立即报名</button>
+</view>
+<!-- 分享弹出层 -->
+<view class="shareBox">
+    <van-overlay show="{{show}}">
+            <view class="shareBottom">
+                <view class="innerShareBox">
+                    <button bindtap="confirm"><image src="../../../image/朋友圈.png" style="width:40rpx;height:40rpx;vertical-align: middle;"></image> 分享至朋友圈</button>
+                    <button open-type="share" style="background: #f7b425;color:#fff;"><image src="../../../image/微信.png" style="width:40rpx;height:40rpx;vertical-align: middle;"></image> 分享至好友</button>
+                </view>
+                <view style="background:#f0f0f2;width:750rpx;line-height:80rpx;" bindtap="onClickHide">取消</view>
+        </view>
+    </van-overlay>
+</view>
+
+

@@ -1,0 +1,13 @@
+<view class="detail" wx:if='{{noMore==0}}'>
+  <view class="detail_item" wx:for='{{quotationDeatil}}'>
+    <view>产品名称：{{item.productName}}</view>
+    <view>颜色系列：{{item.productColor}}</view>
+    <view>创建时间：{{item.createdTime}}</view>
+    <view>单位：{{item.unit}}</view>
+    <view>数量：{{item.quantity}}</view>
+    <view>单价：{{item.salePrice}}</view>
+    <view>小计：{{item.specification}}</view>
+  </view>
+  
+</view>
+<view wx:else class="not">暂无报价详情数据</view>

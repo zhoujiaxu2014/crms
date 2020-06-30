@@ -1,0 +1,16 @@
+var sub=function(val){
+    if(val.length===0 || val===undefined){
+        return;
+    }else{
+        return val.substring(0,16)
+    }
+}
+var str=function(val){
+    if(val==='' || val===undefined|| val===null){
+        return;
+    }else{
+        return val.substring(0,2)
+    }
+}
+module.exports.str=str;
+module.exports.sub=sub;

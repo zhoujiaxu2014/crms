@@ -1,0 +1,13 @@
+{
+	"usingComponents": {
+    "address":"../../components/address/address"
+  },
+	"permission": {
+		"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+		}
+	},
+	"navigationBarTitleText": "附近的店",
+	"navigationBarBackgroundColor": "#FA3E42",
+	"navigationBarTextStyle": "white"
+}

@@ -1,0 +1,11 @@
+<view class="templateDetail">
+    <view class="h3">被告知，每个进入样板间的人都必须穿鞋套</view>
+    <view class="tip"><span>2020-03-11</span><span>已有200人加入样板间参观</span></view>
+    <view><image src="../../../../image/table.jpg" style="width:100%;"></image></view>
+    <view class="h3">被告知，每个进入样板间的人都必须穿鞋套</view>
+    <view class="tip content">
+        <view>在开发过程中,我们经常会用到这种超出三行显示...的要求,使用css属性是可以的,但是需要考虑兼容性问题 实现单行文本的溢出显示省略号,我们应该都知道用text-overflow:ellipsis属性,同时...</view>
+        <view>已有200人加入样板间参观此处延伸 ,超出三行显示展示全文,如果使用以上属性我们可以发现,</view>
+    </view>
+
+</view>

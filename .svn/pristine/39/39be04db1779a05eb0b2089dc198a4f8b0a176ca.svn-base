@@ -1,0 +1,112 @@
+<!-- 轮播图 -->
+<view class="content">
+	<view class="banner">
+		<swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}"
+		 duration="{{duration}}">
+			<block wx:for="{{background}}" wx:key="*this">
+				<swiper-item class="image-container">
+					<image src="{{item.activityCpic}}" class="slide-image" height="350" bindtap="gotoActivityDetails" data-id="{{item.activityId}}" />
+				</swiper-item>
+			</block>
+    </swiper>
+	<view class="wisdomOffer">
+    <van-button color="#fc3d42" bindtap='seeOffer'>智慧报价</van-button>
+  </view>
+  </view>
+  <!-- <view></view> -->
+</view>
+<!-- 选择地址 -->
+<!-- <view class="area" catchtap="goStart">
+	<view></view>
+	<view class="cityPicker">
+		<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker" wx:if="{{region.length>0}}">
+				请选择地址搜索活动：{{region[0]}}，{{region[1]}}，{{region[2]}}
+				<van-icon class="icon-right" name="arrow" />
+			</view>
+			<view class="picker" wx:else>
+				请选择地址搜索活动：
+				<van-icon class="icon-right" name="arrow" />
+			</view>
+		</picker>
+	</view>
+</view> -->
+<!-- <view wx:if='{{activeData.length<2}}'>
+	<view style='display: flex;justify-content: space-around;padding: 0 10px;border-radius: 10rpx;overflow: hidden;margin-top: 100rpx;'>
+		<image class="activityImg"  wx:for='{{activeData}}' data-gid='{{item}}' bindtap='participateActivity' src="{{item.luckyDrawBanner}}" style='width:100%;height:250rpx;padding-right: 10rpx;box-shadow: 1px 8px 8px 1px #d1d4d7;' ></image>
+	</view>
+</view> -->
+<view>
+  <view style='display: flex;justify-content: space-around;padding: 0 10px;border-radius: 10rpx;margin-top: 100rpx;'>
+    <image class="activityImg" bindtap='participateActivity' wx:if="{{activeData!==''}}" data-gid='{{activeData}}' src="{{activeData.luckyDrawBanner}}" style='width:45%;height:250rpx;padding-right: 10rpx;box-shadow: 5px 8px 10px 1px #d1d4d7;' ></image>
+    <view wx:else class="else_activity"><van-icon name="warning" />暂无活动</view>
+    <image class="activityImg" bindtap='SeeMoreActivities' src="../../image/more.png" style='width:45%;height:250rpx;padding-right: 10rpx;box-shadow: 5px 8px 10px 1px #d1d4d7;' ></image>
+	</view>
+</view>
+<view style='display: flex;justify-content: space-between;padding: 10px;font-size:34rpx;color: #6E6E6E;margin-top: 20rpx;line-height: 42rpx;'>
+	<view>热门活动</view>
+	<view bindtap='moreActivity' style='padding-right: 10rpx;display: flex;'><view style='vertical-align: middle;font-size: 12px;'>更多</view><van-icon name="arrow" style='vertical-align: middle;' /></view>
+</view>
+
+<!-- <view style='display: flex;justify-content: space-between;padding: 10px  10px 0;font-size:34rpx;color: #6E6E6E;'>
+	<view>经销商活动</view>
+	<view style='padding-right: 10rpx;'> </view>
+</view> -->
+<!-- 活动列表 -->
+<view wx:if="{{activeHotList.length>0}}">
+	<view class="list" wx:for="{{activeHotList}}" wx:key="index">
+		<view class="top">
+			<!-- <view class="inner_top">
+				<view class="aside"></view>
+				<view>{{item.activityName}}</view>
+			</view> -->
+			<view class="middle" data-id="{{item.activityId}}" bindtap="gotoActivityDetails">
+				<!-- <image src="{{item.activityPic}}" style="width:160rpx;height:160rpx;"></image> -->
+				<van-image width="80" height="80" src="{{item.activityTpic}}" />
+				<ul class="listText">
+          <li style="color: #3D3D3D;font-size: 16px;font-weight: 540;">
+						<span>{{item.activityName}}</span>
+					</li>
+					<li style="color: #A0A0A0;font-size: 14px;">
+						<span>{{item.startTime}}~{{item.endTime}}</span>
+					</li>
+					<!-- <li>活动结束时间：
+						<span>{{item.endTime}}</span>
+					</li> -->
+					<!-- <li class="displayLiOne">活动参与范围：
+						<span>{{item.province}}{{item.city == null?"":item.city}}{{item.area == null?"":item.area}}</span>
+					</li> -->
+					<li class="displayLi" style="color: #CACACA;font-size: 12px;">
+						<span>{{item.activityDesc}}</span>
+					</li>
+				</ul>
+			</view>
+		</view>
+		<!-- <view class="listBottom">
+      <van-notice-bar left-icon="volume-o" text="3分钟之前，李女士参加了活动3分钟之前，李女士参加了活动3分钟之前，李女士参加了活动">
+      </van-notice-bar>
+    </view> -->
+	</view>
+</view>
+<view class="notListData" wx:else>
+	<text>没有更多数据了</text>
+</view>
+<!-- tab栏 -->
+<!-- <view class="tabBar_box">
+  <view>
+    <image src='../../image/homeImg.png'></image>
+    <view>首页</view>
+  </view>
+  <view bindtap='jump' data-num='1'>
+    <image src='../../image/offer.png'></image>
+    <view>智慧报价</view>
+  </view>
+  <view bindtap='jump' data-num='2'>
+    <image src='../../image/myStore.png'></image>
+    <view>社区店</view>
+  </view>
+  <view bindtap='jump' data-num='3'>
+    <image src='../../image/my.png'></image>
+    <view>我的</view>
+  </view>
+</view> -->
